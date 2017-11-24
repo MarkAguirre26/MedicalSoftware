@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Centerport_Medical" Class="DataClasses2DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MARK-PC\SQLEXPRESS;Initial Catalog=Centerport_Medical;Persist Security Info=True;User ID=sa" SettingsObjectName="Centerport.Properties.Settings" SettingsPropertyName="Centerport_MedicalConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.sp_login" Method="sp_login">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="sp_loginResult">
+      <Column Name="cn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fullname" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="UserLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Remark" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_userLevel" Method="sp_userLevel">
+    <ElementType Name="sp_userLevelResult">
+      <Column Name="cn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_User" Method="sp_User">
+    <ElementType Name="sp_UserResult">
+      <Column Name="cn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fullname" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_loginifNotHead" Method="sp_loginifNotHead">
+    <Parameter Name="ID" Parameter="iD" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="sp_loginifNotHeadResult">
+      <Column Name="cn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fullname" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_updateName" Method="sp_updateName">
+    <Parameter Name="lastname" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="firstname" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="middlename" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="birthdate" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="gender" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="address_1" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="contact_1" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="employer" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="position" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="passport_no" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="seamansbook_no" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sirb" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ID" Parameter="iD" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_Seabase_Mer1_Sub" Method="sp_Seabase_Mer1_Sub">
+    <Parameter Name="ID" Parameter="iD" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="sp_Seabase_Mer1_SubResult">
+      <Column Name="lastname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="firstname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="middlename" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="address_1" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="position" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="marital_status" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="gender" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="birthdate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="place_of_birth" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="employer" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="passport_no" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="seamansbook_no" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nationality" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="religion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="designation" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="picture" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" />
+      <Column Name="resultid" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="HEIGHT" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="WEIGHT" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="BP" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="PULSE" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="RESPIRATION" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="BODY_BUILD" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="FAR_OD_U" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="FAR_OD_C" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="FAR_OS_U" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="FAR_OS_C" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="NEAR_ODJ_U" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="NEAR_ODJ_C" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="NEAR_OSJ_U" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="NEAR_OSJ_C" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="ISHIHARA_U" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="ISHIHARA_C" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="HEARING_AD" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="HEARING_AS" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="CONVERSATIONAL_AS" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="HEARING_RIGHT" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="HEARING_LEFT" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="CLARITY_OF_SPEECH" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="BP_DIASTOLIC" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="RHYTHM" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="head_injury" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="frequent_headaches" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="frequent_dizziness" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="fainting_spells" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="insomnia" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="depression" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="trachoma" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="deafness" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="nose_throat_disorder" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="tuberculosis" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="other_lung_disorder" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="high_blood_pressure" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="heart_disease" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="rheumatic_fever" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="diabetes_mellitus" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="other_endocrine_disorder" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="cancer_tumor" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="blood_disorders" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="stomach_pain" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="other_abdominal_disorder" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="kidney_bladder_disorder" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="back_injury" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="genetic_hereditary" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="sexually_transmit_disease" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="asthma" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="allergies" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="gynecological_disorder" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="operations" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="operations_specify" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="schistosomiasis" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="last_menstrual_period" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="allergies_specify" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="other_abdominal_specify" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column1" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column2" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column3" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column4" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column5" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column6" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column7" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column7_comment" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column8" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column8_comment" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column1_comment" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column2_comment" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column3_comment" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column4_comment" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column5_comment" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column6_comment" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_Seabase_MedHistory2" Method="sp_Seabase_MedHistory2">
+    <Parameter Name="ID" Parameter="iD" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="sp_Seabase_MedHistory2Result">
+      <Column Name="cn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="resultid" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column1" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column2" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column3" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column4" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column5" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column6" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column7" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column7_comment" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column8" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column8_comment" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column1_comment" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column2_comment" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column3_comment" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column4_comment" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column5_comment" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="column6_comment" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_krpan" Method="sp_krpan">
+    <Parameter Name="ID" Parameter="iD" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="sp_krpanResult">
+      <Column Name="cn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Resultid" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="BloodDisorder" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="MentalDisorder" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Cardiovascular" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CircumferenceChest" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Infection" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="NervousSystem" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Digestive" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Liver" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Anemia" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UrineSyphilisis" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_countKrPan" Method="sp_countKrPan">
+    <Parameter Name="ID" Parameter="iD" Type="System.String" DbType="VarChar(1)" />
+    <ElementType Name="sp_countKrPanResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_krpan_report" Method="sp_krpan_report">
+    <Parameter Name="ID" Parameter="iD" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="sp_krpan_reportResult">
+      <Column Name="cn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Resultid" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="BloodDisorder" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="MentalDisorder" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Cardiovascular" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CircumferenceChest" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Infection" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="NervousSystem" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Digestive" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Liver" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Anemia" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UrineSyphilisis" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_update_krpan" Method="sp_update_krpan">
+    <Parameter Name="ID1" Parameter="iD1" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="ID2" Parameter="iD2" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="ID3" Parameter="iD3" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="ID4" Parameter="iD4" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="ID5" Parameter="iD5" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="ID6" Parameter="iD6" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="ID7" Parameter="iD7" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="ID8" Parameter="iD8" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="ID9" Parameter="iD9" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="ID10" Parameter="iD10" Type="System.String" DbType="VarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

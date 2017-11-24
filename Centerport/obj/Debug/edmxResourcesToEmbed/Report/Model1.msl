@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="cmsiModelStoreContainer" CdmEntityContainer="cmsiEntities">
+    <EntitySetMapping Name="m_patient">
+      <EntityTypeMapping TypeName="cmsiModel.m_patient">
+        <MappingFragment StoreEntitySet="m_patient">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="papin" ColumnName="papin" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="middlename" ColumnName="middlename" />
+          <ScalarProperty Name="address_1" ColumnName="address_1" />
+          <ScalarProperty Name="address_2" ColumnName="address_2" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="district" ColumnName="district" />
+          <ScalarProperty Name="contact_1" ColumnName="contact_1" />
+          <ScalarProperty Name="contact_2" ColumnName="contact_2" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="marital_status" ColumnName="marital_status" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+          <ScalarProperty Name="place_of_birth" ColumnName="place_of_birth" />
+          <ScalarProperty Name="type_of_job" ColumnName="type_of_job" />
+          <ScalarProperty Name="employer" ColumnName="employer" />
+          <ScalarProperty Name="passport_no" ColumnName="passport_no" />
+          <ScalarProperty Name="seamansbook_no" ColumnName="seamansbook_no" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+          <ScalarProperty Name="registration_date" ColumnName="registration_date" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="nationality" ColumnName="nationality" />
+          <ScalarProperty Name="religion" ColumnName="religion" />
+          <ScalarProperty Name="test_data" ColumnName="test_data" />
+          <ScalarProperty Name="father_name" ColumnName="father_name" />
+          <ScalarProperty Name="father_occupation" ColumnName="father_occupation" />
+          <ScalarProperty Name="mother_name" ColumnName="mother_name" />
+          <ScalarProperty Name="no_of_brothers" ColumnName="no_of_brothers" />
+          <ScalarProperty Name="no_of_sisters" ColumnName="no_of_sisters" />
+          <ScalarProperty Name="birth_order" ColumnName="birth_order" />
+          <ScalarProperty Name="spouse_name" ColumnName="spouse_name" />
+          <ScalarProperty Name="spouse_occupation" ColumnName="spouse_occupation" />
+          <ScalarProperty Name="no_of_children" ColumnName="no_of_children" />
+          <ScalarProperty Name="elementary" ColumnName="elementary" />
+          <ScalarProperty Name="highschool" ColumnName="highschool" />
+          <ScalarProperty Name="college" ColumnName="college" />
+          <ScalarProperty Name="course" ColumnName="course" />
+          <ScalarProperty Name="highest_level_attended" ColumnName="highest_level_attended" />
+          <ScalarProperty Name="mother_occupation" ColumnName="mother_occupation" />
+          <ScalarProperty Name="prev_work_start" ColumnName="prev_work_start" />
+          <ScalarProperty Name="prev_work_end" ColumnName="prev_work_end" />
+          <ScalarProperty Name="prev_company" ColumnName="prev_company" />
+          <ScalarProperty Name="prev_position" ColumnName="prev_position" />
+          <ScalarProperty Name="prev_leave_reason" ColumnName="prev_leave_reason" />
+          <ScalarProperty Name="prev_years" ColumnName="prev_years" />
+          <ScalarProperty Name="date_last_updated" ColumnName="date_last_updated" />
+          <ScalarProperty Name="sirb" ColumnName="sirb" />
+          <ScalarProperty Name="designation" ColumnName="designation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pbcatcols">
+      <EntityTypeMapping TypeName="cmsiModel.pbcatcol">
+        <MappingFragment StoreEntitySet="pbcatcol">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="pbc_tnam" ColumnName="pbc_tnam" />
+          <ScalarProperty Name="pbc_tid" ColumnName="pbc_tid" />
+          <ScalarProperty Name="pbc_ownr" ColumnName="pbc_ownr" />
+          <ScalarProperty Name="pbc_cnam" ColumnName="pbc_cnam" />
+          <ScalarProperty Name="pbc_cid" ColumnName="pbc_cid" />
+          <ScalarProperty Name="pbc_labl" ColumnName="pbc_labl" />
+          <ScalarProperty Name="pbc_lpos" ColumnName="pbc_lpos" />
+          <ScalarProperty Name="pbc_hdr" ColumnName="pbc_hdr" />
+          <ScalarProperty Name="pbc_hpos" ColumnName="pbc_hpos" />
+          <ScalarProperty Name="pbc_jtfy" ColumnName="pbc_jtfy" />
+          <ScalarProperty Name="pbc_mask" ColumnName="pbc_mask" />
+          <ScalarProperty Name="pbc_case" ColumnName="pbc_case" />
+          <ScalarProperty Name="pbc_hght" ColumnName="pbc_hght" />
+          <ScalarProperty Name="pbc_wdth" ColumnName="pbc_wdth" />
+          <ScalarProperty Name="pbc_ptrn" ColumnName="pbc_ptrn" />
+          <ScalarProperty Name="pbc_bmap" ColumnName="pbc_bmap" />
+          <ScalarProperty Name="pbc_init" ColumnName="pbc_init" />
+          <ScalarProperty Name="pbc_cmnt" ColumnName="pbc_cmnt" />
+          <ScalarProperty Name="pbc_edit" ColumnName="pbc_edit" />
+          <ScalarProperty Name="pbc_tag" ColumnName="pbc_tag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pbcatedts">
+      <EntityTypeMapping TypeName="cmsiModel.pbcatedt">
+        <MappingFragment StoreEntitySet="pbcatedt">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="pbe_name" ColumnName="pbe_name" />
+          <ScalarProperty Name="pbe_edit" ColumnName="pbe_edit" />
+          <ScalarProperty Name="pbe_type" ColumnName="pbe_type" />
+          <ScalarProperty Name="pbe_cntr" ColumnName="pbe_cntr" />
+          <ScalarProperty Name="pbe_seqn" ColumnName="pbe_seqn" />
+          <ScalarProperty Name="pbe_flag" ColumnName="pbe_flag" />
+          <ScalarProperty Name="pbe_work" ColumnName="pbe_work" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pbcatfmts">
+      <EntityTypeMapping TypeName="cmsiModel.pbcatfmt">
+        <MappingFragment StoreEntitySet="pbcatfmt">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="pbf_name" ColumnName="pbf_name" />
+          <ScalarProperty Name="pbf_frmt" ColumnName="pbf_frmt" />
+          <ScalarProperty Name="pbf_type" ColumnName="pbf_type" />
+          <ScalarProperty Name="pbf_cntr" ColumnName="pbf_cntr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pbcattbls">
+      <EntityTypeMapping TypeName="cmsiModel.pbcattbl">
+        <MappingFragment StoreEntitySet="pbcattbl">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="pbt_tnam" ColumnName="pbt_tnam" />
+          <ScalarProperty Name="pbt_tid" ColumnName="pbt_tid" />
+          <ScalarProperty Name="pbt_ownr" ColumnName="pbt_ownr" />
+          <ScalarProperty Name="pbd_fhgt" ColumnName="pbd_fhgt" />
+          <ScalarProperty Name="pbd_fwgt" ColumnName="pbd_fwgt" />
+          <ScalarProperty Name="pbd_fitl" ColumnName="pbd_fitl" />
+          <ScalarProperty Name="pbd_funl" ColumnName="pbd_funl" />
+          <ScalarProperty Name="pbd_fchr" ColumnName="pbd_fchr" />
+          <ScalarProperty Name="pbd_fptc" ColumnName="pbd_fptc" />
+          <ScalarProperty Name="pbd_ffce" ColumnName="pbd_ffce" />
+          <ScalarProperty Name="pbh_fhgt" ColumnName="pbh_fhgt" />
+          <ScalarProperty Name="pbh_fwgt" ColumnName="pbh_fwgt" />
+          <ScalarProperty Name="pbh_fitl" ColumnName="pbh_fitl" />
+          <ScalarProperty Name="pbh_funl" ColumnName="pbh_funl" />
+          <ScalarProperty Name="pbh_fchr" ColumnName="pbh_fchr" />
+          <ScalarProperty Name="pbh_fptc" ColumnName="pbh_fptc" />
+          <ScalarProperty Name="pbh_ffce" ColumnName="pbh_ffce" />
+          <ScalarProperty Name="pbl_fhgt" ColumnName="pbl_fhgt" />
+          <ScalarProperty Name="pbl_fwgt" ColumnName="pbl_fwgt" />
+          <ScalarProperty Name="pbl_fitl" ColumnName="pbl_fitl" />
+          <ScalarProperty Name="pbl_funl" ColumnName="pbl_funl" />
+          <ScalarProperty Name="pbl_fchr" ColumnName="pbl_fchr" />
+          <ScalarProperty Name="pbl_fptc" ColumnName="pbl_fptc" />
+          <ScalarProperty Name="pbl_ffce" ColumnName="pbl_ffce" />
+          <ScalarProperty Name="pbt_cmnt" ColumnName="pbt_cmnt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pbcatvlds">
+      <EntityTypeMapping TypeName="cmsiModel.pbcatvld">
+        <MappingFragment StoreEntitySet="pbcatvld">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="pbv_name" ColumnName="pbv_name" />
+          <ScalarProperty Name="pbv_vald" ColumnName="pbv_vald" />
+          <ScalarProperty Name="pbv_type" ColumnName="pbv_type" />
+          <ScalarProperty Name="pbv_cntr" ColumnName="pbv_cntr" />
+          <ScalarProperty Name="pbv_msg" ColumnName="pbv_msg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="r_series_gen">
+      <EntityTypeMapping TypeName="cmsiModel.r_series_gen">
+        <MappingFragment StoreEntitySet="r_series_gen">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="sgname" ColumnName="sgname" />
+          <ScalarProperty Name="sgyr" ColumnName="sgyr" />
+          <ScalarProperty Name="sgmo" ColumnName="sgmo" />
+          <ScalarProperty Name="sgseries" ColumnName="sgseries" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_ancillary">
+      <EntityTypeMapping TypeName="cmsiModel.t_ancillary">
+        <MappingFragment StoreEntitySet="t_ancillary">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="result_id" ColumnName="result_id" />
+          <ScalarProperty Name="cxr" ColumnName="cxr" />
+          <ScalarProperty Name="ecg" ColumnName="ecg" />
+          <ScalarProperty Name="cbc" ColumnName="cbc" />
+          <ScalarProperty Name="pregnancy_test" ColumnName="pregnancy_test" />
+          <ScalarProperty Name="urinalysis" ColumnName="urinalysis" />
+          <ScalarProperty Name="stool_exam" ColumnName="stool_exam" />
+          <ScalarProperty Name="hbsag" ColumnName="hbsag" />
+          <ScalarProperty Name="hiv" ColumnName="hiv" />
+          <ScalarProperty Name="rpr" ColumnName="rpr" />
+          <ScalarProperty Name="blood_type" ColumnName="blood_type" />
+          <ScalarProperty Name="blood_chemistries" ColumnName="blood_chemistries" />
+          <ScalarProperty Name="psychological_exam" ColumnName="psychological_exam" />
+          <ScalarProperty Name="additional_test" ColumnName="additional_test" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="recommendation" ColumnName="recommendation" />
+          <ScalarProperty Name="additional_test2" ColumnName="additional_test2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_clinical_chemistry">
+      <EntityTypeMapping TypeName="cmsiModel.t_clinical_chemistry">
+        <MappingFragment StoreEntitySet="t_clinical_chemistry">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="resultid" ColumnName="resultid" />
+          <ScalarProperty Name="fbs" ColumnName="fbs" />
+          <ScalarProperty Name="fbs_con" ColumnName="fbs_con" />
+          <ScalarProperty Name="bun" ColumnName="bun" />
+          <ScalarProperty Name="bun_con" ColumnName="bun_con" />
+          <ScalarProperty Name="creatinine" ColumnName="creatinine" />
+          <ScalarProperty Name="creatinine_con" ColumnName="creatinine_con" />
+          <ScalarProperty Name="cholesterol_susp" ColumnName="cholesterol_susp" />
+          <ScalarProperty Name="cholesterol_susp_con" ColumnName="cholesterol_susp_con" />
+          <ScalarProperty Name="cholesterol_elev" ColumnName="cholesterol_elev" />
+          <ScalarProperty Name="cholesterol_elev_con" ColumnName="cholesterol_elev_con" />
+          <ScalarProperty Name="uric_acid" ColumnName="uric_acid" />
+          <ScalarProperty Name="uric_acid_con" ColumnName="uric_acid_con" />
+          <ScalarProperty Name="sgot" ColumnName="sgot" />
+          <ScalarProperty Name="sgot_con" ColumnName="sgot_con" />
+          <ScalarProperty Name="sgpt" ColumnName="sgpt" />
+          <ScalarProperty Name="sgpt_con" ColumnName="sgpt_con" />
+          <ScalarProperty Name="alk_phos" ColumnName="alk_phos" />
+          <ScalarProperty Name="alk_phos_con" ColumnName="alk_phos_con" />
+          <ScalarProperty Name="vdrl" ColumnName="vdrl" />
+          <ScalarProperty Name="hbsag" ColumnName="hbsag" />
+          <ScalarProperty Name="ahbe" ColumnName="ahbe" />
+          <ScalarProperty Name="hbeag" ColumnName="hbeag" />
+          <ScalarProperty Name="widal_test" ColumnName="widal_test" />
+          <ScalarProperty Name="malarial_smear" ColumnName="malarial_smear" />
+          <ScalarProperty Name="hiv" ColumnName="hiv" />
+          <ScalarProperty Name="hbsag_titer" ColumnName="hbsag_titer" />
+          <ScalarProperty Name="ahbe_titer" ColumnName="ahbe_titer" />
+          <ScalarProperty Name="hbeag_titer" ColumnName="hbeag_titer" />
+          <ScalarProperty Name="plasmodium" ColumnName="plasmodium" />
+          <ScalarProperty Name="repeat_test_id" ColumnName="repeat_test_id" />
+          <ScalarProperty Name="fbs_high" ColumnName="fbs_high" />
+          <ScalarProperty Name="bun_high" ColumnName="bun_high" />
+          <ScalarProperty Name="creatinine_high" ColumnName="creatinine_high" />
+          <ScalarProperty Name="cholesterol_high" ColumnName="cholesterol_high" />
+          <ScalarProperty Name="triglycerides_high" ColumnName="triglycerides_high" />
+          <ScalarProperty Name="uric_acid_high" ColumnName="uric_acid_high" />
+          <ScalarProperty Name="sgot_high" ColumnName="sgot_high" />
+          <ScalarProperty Name="sgpt_high" ColumnName="sgpt_high" />
+          <ScalarProperty Name="alk_high" ColumnName="alk_high" />
+          <ScalarProperty Name="result_date" ColumnName="result_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_fecalysis">
+      <EntityTypeMapping TypeName="cmsiModel.t_fecalysis">
+        <MappingFragment StoreEntitySet="t_fecalysis">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="resultid" ColumnName="resultid" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="ova_parasite" ColumnName="ova_parasite" />
+          <ScalarProperty Name="consistency" ColumnName="consistency" />
+          <ScalarProperty Name="red_blood_cells" ColumnName="red_blood_cells" />
+          <ScalarProperty Name="white_blood_cells" ColumnName="white_blood_cells" />
+          <ScalarProperty Name="amoeba" ColumnName="amoeba" />
+          <ScalarProperty Name="others" ColumnName="others" />
+          <ScalarProperty Name="occult_blood" ColumnName="occult_blood" />
+          <ScalarProperty Name="repeat_test_id" ColumnName="repeat_test_id" />
+          <ScalarProperty Name="pus_cells" ColumnName="pus_cells" />
+          <ScalarProperty Name="mucus" ColumnName="mucus" />
+          <ScalarProperty Name="result_date" ColumnName="result_date" />
+          <ScalarProperty Name="color_others" ColumnName="color_others" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_hematology">
+      <EntityTypeMapping TypeName="cmsiModel.t_hematology">
+        <MappingFragment StoreEntitySet="t_hematology">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="resultid" ColumnName="resultid" />
+          <ScalarProperty Name="hemoglobin" ColumnName="hemoglobin" />
+          <ScalarProperty Name="hematocrit" ColumnName="hematocrit" />
+          <ScalarProperty Name="rbc_count" ColumnName="rbc_count" />
+          <ScalarProperty Name="wbc_count" ColumnName="wbc_count" />
+          <ScalarProperty Name="lymphocytes" ColumnName="lymphocytes" />
+          <ScalarProperty Name="segmenters" ColumnName="segmenters" />
+          <ScalarProperty Name="eosinophils" ColumnName="eosinophils" />
+          <ScalarProperty Name="stab_cells" ColumnName="stab_cells" />
+          <ScalarProperty Name="basophils" ColumnName="basophils" />
+          <ScalarProperty Name="monocytes" ColumnName="monocytes" />
+          <ScalarProperty Name="blood_type" ColumnName="blood_type" />
+          <ScalarProperty Name="esr" ColumnName="esr" />
+          <ScalarProperty Name="others" ColumnName="others" />
+          <ScalarProperty Name="repeat_test_id" ColumnName="repeat_test_id" />
+          <ScalarProperty Name="myelocytes" ColumnName="myelocytes" />
+          <ScalarProperty Name="juveniles" ColumnName="juveniles" />
+          <ScalarProperty Name="platelet" ColumnName="platelet" />
+          <ScalarProperty Name="result_date" ColumnName="result_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_hiv">
+      <EntityTypeMapping TypeName="cmsiModel.t_hiv">
+        <MappingFragment StoreEntitySet="t_hiv">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="resultid" ColumnName="resultid" />
+          <ScalarProperty Name="rapid" ColumnName="rapid" />
+          <ScalarProperty Name="particle_agglutination" ColumnName="particle_agglutination" />
+          <ScalarProperty Name="eia_cmia_elfa" ColumnName="eia_cmia_elfa" />
+          <ScalarProperty Name="others_specify" ColumnName="others_specify" />
+          <ScalarProperty Name="results" ColumnName="results" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_med_history">
+      <EntityTypeMapping TypeName="cmsiModel.t_med_history">
+        <MappingFragment StoreEntitySet="t_med_history">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="resultid" ColumnName="resultid" />
+          <ScalarProperty Name="head_injury" ColumnName="head_injury" />
+          <ScalarProperty Name="frequent_headaches" ColumnName="frequent_headaches" />
+          <ScalarProperty Name="frequent_dizziness" ColumnName="frequent_dizziness" />
+          <ScalarProperty Name="fainting_spells" ColumnName="fainting_spells" />
+          <ScalarProperty Name="insomnia" ColumnName="insomnia" />
+          <ScalarProperty Name="depression" ColumnName="depression" />
+          <ScalarProperty Name="trachoma" ColumnName="trachoma" />
+          <ScalarProperty Name="deafness" ColumnName="deafness" />
+          <ScalarProperty Name="nose_throat_disorder" ColumnName="nose_throat_disorder" />
+          <ScalarProperty Name="tuberculosis" ColumnName="tuberculosis" />
+          <ScalarProperty Name="other_lung_disorder" ColumnName="other_lung_disorder" />
+          <ScalarProperty Name="high_blood_pressure" ColumnName="high_blood_pressure" />
+          <ScalarProperty Name="heart_disease" ColumnName="heart_disease" />
+          <ScalarProperty Name="rheumatic_fever" ColumnName="rheumatic_fever" />
+          <ScalarProperty Name="diabetes_mellitus" ColumnName="diabetes_mellitus" />
+          <ScalarProperty Name="other_endocrine_disorder" ColumnName="other_endocrine_disorder" />
+          <ScalarProperty Name="cancer_tumor" ColumnName="cancer_tumor" />
+          <ScalarProperty Name="blood_disorders" ColumnName="blood_disorders" />
+          <ScalarProperty Name="stomach_pain" ColumnName="stomach_pain" />
+          <ScalarProperty Name="other_abdominal_disorder" ColumnName="other_abdominal_disorder" />
+          <ScalarProperty Name="kidney_bladder_disorder" ColumnName="kidney_bladder_disorder" />
+          <ScalarProperty Name="back_injury" ColumnName="back_injury" />
+          <ScalarProperty Name="genetic_hereditary" ColumnName="genetic_hereditary" />
+          <ScalarProperty Name="sexually_transmit_disease" ColumnName="sexually_transmit_disease" />
+          <ScalarProperty Name="tropical_disease" ColumnName="tropical_disease" />
+          <ScalarProperty Name="asthma" ColumnName="asthma" />
+          <ScalarProperty Name="allergies" ColumnName="allergies" />
+          <ScalarProperty Name="gynecological_disorder" ColumnName="gynecological_disorder" />
+          <ScalarProperty Name="operations" ColumnName="operations" />
+          <ScalarProperty Name="operations_specify" ColumnName="operations_specify" />
+          <ScalarProperty Name="others" ColumnName="others" />
+          <ScalarProperty Name="consulted" ColumnName="consulted" />
+          <ScalarProperty Name="consulted_specify" ColumnName="consulted_specify" />
+          <ScalarProperty Name="maintenance_meds" ColumnName="maintenance_meds" />
+          <ScalarProperty Name="operations_tag" ColumnName="operations_tag" />
+          <ScalarProperty Name="schistosomiasis" ColumnName="schistosomiasis" />
+          <ScalarProperty Name="last_menstrual_period" ColumnName="last_menstrual_period" />
+          <ScalarProperty Name="allergies_specify" ColumnName="allergies_specify" />
+          <ScalarProperty Name="other_abdominal_specify" ColumnName="other_abdominal_specify" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_med_history2">
+      <EntityTypeMapping TypeName="cmsiModel.t_med_history2">
+        <MappingFragment StoreEntitySet="t_med_history2">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="resultid" ColumnName="resultid" />
+          <ScalarProperty Name="column1" ColumnName="column1" />
+          <ScalarProperty Name="column2" ColumnName="column2" />
+          <ScalarProperty Name="column3" ColumnName="column3" />
+          <ScalarProperty Name="column4" ColumnName="column4" />
+          <ScalarProperty Name="column5" ColumnName="column5" />
+          <ScalarProperty Name="column6" ColumnName="column6" />
+          <ScalarProperty Name="column7" ColumnName="column7" />
+          <ScalarProperty Name="column7_comment" ColumnName="column7_comment" />
+          <ScalarProperty Name="column8" ColumnName="column8" />
+          <ScalarProperty Name="column8_comment" ColumnName="column8_comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_others">
+      <EntityTypeMapping TypeName="cmsiModel.t_others">
+        <MappingFragment StoreEntitySet="t_others">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="resultid" ColumnName="resultid" />
+          <ScalarProperty Name="SKIN_TAG" ColumnName="SKIN_TAG" />
+          <ScalarProperty Name="SKIN" ColumnName="SKIN" />
+          <ScalarProperty Name="HEAD_NECK_SCALP_TAG" ColumnName="HEAD_NECK_SCALP_TAG" />
+          <ScalarProperty Name="HEAD_NECK_SCALP" ColumnName="HEAD_NECK_SCALP" />
+          <ScalarProperty Name="EYES_TAG" ColumnName="EYES_TAG" />
+          <ScalarProperty Name="EYES" ColumnName="EYES" />
+          <ScalarProperty Name="PUPILS_TAG" ColumnName="PUPILS_TAG" />
+          <ScalarProperty Name="PUPILS" ColumnName="PUPILS" />
+          <ScalarProperty Name="EARS_EARDRUM_TAG" ColumnName="EARS_EARDRUM_TAG" />
+          <ScalarProperty Name="EARS_EARDRUM" ColumnName="EARS_EARDRUM" />
+          <ScalarProperty Name="NOSE_SINUSES_TAG" ColumnName="NOSE_SINUSES_TAG" />
+          <ScalarProperty Name="NOSE_SINUSES" ColumnName="NOSE_SINUSES" />
+          <ScalarProperty Name="MOUTH_THROAT_TAG" ColumnName="MOUTH_THROAT_TAG" />
+          <ScalarProperty Name="MOUTH_THROAT" ColumnName="MOUTH_THROAT" />
+          <ScalarProperty Name="NECK_LN_THYROID_TAG" ColumnName="NECK_LN_THYROID_TAG" />
+          <ScalarProperty Name="NECK_LN_THYROID" ColumnName="NECK_LN_THYROID" />
+          <ScalarProperty Name="CHEST_BREAST_AXILLA_TAG" ColumnName="CHEST_BREAST_AXILLA_TAG" />
+          <ScalarProperty Name="CHEST_BREAST_AXILLA" ColumnName="CHEST_BREAST_AXILLA" />
+          <ScalarProperty Name="LUNGS_TAG" ColumnName="LUNGS_TAG" />
+          <ScalarProperty Name="LUNGS" ColumnName="LUNGS" />
+          <ScalarProperty Name="HEART_TAG" ColumnName="HEART_TAG" />
+          <ScalarProperty Name="HEART" ColumnName="HEART" />
+          <ScalarProperty Name="ABDOMEN_TAG" ColumnName="ABDOMEN_TAG" />
+          <ScalarProperty Name="ABDOMEN" ColumnName="ABDOMEN" />
+          <ScalarProperty Name="BACK_FLANK_TAG" ColumnName="BACK_FLANK_TAG" />
+          <ScalarProperty Name="BACK_FLANK" ColumnName="BACK_FLANK" />
+          <ScalarProperty Name="ANUS_RECTUM_TAG" ColumnName="ANUS_RECTUM_TAG" />
+          <ScalarProperty Name="ANUS_RECTUM" ColumnName="ANUS_RECTUM" />
+          <ScalarProperty Name="GU_SYSTEM_TAG" ColumnName="GU_SYSTEM_TAG" />
+          <ScalarProperty Name="GU_SYSTEM" ColumnName="GU_SYSTEM" />
+          <ScalarProperty Name="INGUINALS_GENITALS_TAG" ColumnName="INGUINALS_GENITALS_TAG" />
+          <ScalarProperty Name="INGUINALS_GENITALS" ColumnName="INGUINALS_GENITALS" />
+          <ScalarProperty Name="REFLEXES_TAG" ColumnName="REFLEXES_TAG" />
+          <ScalarProperty Name="REFLEXES" ColumnName="REFLEXES" />
+          <ScalarProperty Name="EXTREMITIES_TAG" ColumnName="EXTREMITIES_TAG" />
+          <ScalarProperty Name="EXTREMITIES" ColumnName="EXTREMITIES" />
+          <ScalarProperty Name="DENTAL" ColumnName="DENTAL" />
+          <ScalarProperty Name="DENTAL_TAG" ColumnName="DENTAL_TAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_phy_exam">
+      <EntityTypeMapping TypeName="cmsiModel.t_phy_exam">
+        <MappingFragment StoreEntitySet="t_phy_exam">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="resultid" ColumnName="resultid" />
+          <ScalarProperty Name="HEIGHT" ColumnName="HEIGHT" />
+          <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+          <ScalarProperty Name="BP" ColumnName="BP" />
+          <ScalarProperty Name="PULSE" ColumnName="PULSE" />
+          <ScalarProperty Name="RESPIRATION" ColumnName="RESPIRATION" />
+          <ScalarProperty Name="BODY_BUILD" ColumnName="BODY_BUILD" />
+          <ScalarProperty Name="FAR_OD_U" ColumnName="FAR_OD_U" />
+          <ScalarProperty Name="FAR_OD_C" ColumnName="FAR_OD_C" />
+          <ScalarProperty Name="FAR_OS_U" ColumnName="FAR_OS_U" />
+          <ScalarProperty Name="FAR_OS_C" ColumnName="FAR_OS_C" />
+          <ScalarProperty Name="NEAR_ODJ_U" ColumnName="NEAR_ODJ_U" />
+          <ScalarProperty Name="NEAR_ODJ_C" ColumnName="NEAR_ODJ_C" />
+          <ScalarProperty Name="NEAR_OSJ_U" ColumnName="NEAR_OSJ_U" />
+          <ScalarProperty Name="NEAR_OSJ_C" ColumnName="NEAR_OSJ_C" />
+          <ScalarProperty Name="ISHIHARA_U" ColumnName="ISHIHARA_U" />
+          <ScalarProperty Name="ISHIHARA_C" ColumnName="ISHIHARA_C" />
+          <ScalarProperty Name="HEARING_AD" ColumnName="HEARING_AD" />
+          <ScalarProperty Name="HEARING_AS" ColumnName="HEARING_AS" />
+          <ScalarProperty Name="SPEECH" ColumnName="SPEECH" />
+          <ScalarProperty Name="CONVERSATIONAL_AD" ColumnName="CONVERSATIONAL_AD" />
+          <ScalarProperty Name="CONVERSATIONAL_AS" ColumnName="CONVERSATIONAL_AS" />
+          <ScalarProperty Name="SATISFACTORY_HEARING" ColumnName="SATISFACTORY_HEARING" />
+          <ScalarProperty Name="SATISFACTORY_SIGHT_AID" ColumnName="SATISFACTORY_SIGHT_AID" />
+          <ScalarProperty Name="SATISFACTORY_SIGHT_UNAID" ColumnName="SATISFACTORY_SIGHT_UNAID" />
+          <ScalarProperty Name="SATISFACTORY_PSYCHO" ColumnName="SATISFACTORY_PSYCHO" />
+          <ScalarProperty Name="VISUAL_AIDS" ColumnName="VISUAL_AIDS" />
+          <ScalarProperty Name="FIT_FOR_LOOKOUT" ColumnName="FIT_FOR_LOOKOUT" />
+          <ScalarProperty Name="HEARING_RIGHT" ColumnName="HEARING_RIGHT" />
+          <ScalarProperty Name="HEARING_LEFT" ColumnName="HEARING_LEFT" />
+          <ScalarProperty Name="CLARITY_OF_SPEECH" ColumnName="CLARITY_OF_SPEECH" />
+          <ScalarProperty Name="VISUAL_AIDS_REQUIRED" ColumnName="VISUAL_AIDS_REQUIRED" />
+          <ScalarProperty Name="BP_DIASTOLIC" ColumnName="BP_DIASTOLIC" />
+          <ScalarProperty Name="RHYTHM" ColumnName="RHYTHM" />
+          <ScalarProperty Name="VISUAL_AIDS_WORN" ColumnName="VISUAL_AIDS_WORN" />
+          <ScalarProperty Name="COLOR_VISION_DATE_TAKEN" ColumnName="COLOR_VISION_DATE_TAKEN" />
+          <ScalarProperty Name="UNAIDED_HEARING_SATISFACTORY" ColumnName="UNAIDED_HEARING_SATISFACTORY" />
+          <ScalarProperty Name="IDENTITY_CONFIRMED" ColumnName="IDENTITY_CONFIRMED" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_psychology">
+      <EntityTypeMapping TypeName="cmsiModel.t_psychology">
+        <MappingFragment StoreEntitySet="t_psychology">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="resultid" ColumnName="resultid" />
+          <ScalarProperty Name="type_of_test" ColumnName="type_of_test" />
+          <ScalarProperty Name="intelectual_level" ColumnName="intelectual_level" />
+          <ScalarProperty Name="res_persevering" ColumnName="res_persevering" />
+          <ScalarProperty Name="res_obedient" ColumnName="res_obedient" />
+          <ScalarProperty Name="res_selfdiscipline" ColumnName="res_selfdiscipline" />
+          <ScalarProperty Name="res_enthusiastic" ColumnName="res_enthusiastic" />
+          <ScalarProperty Name="res_venturesome" ColumnName="res_venturesome" />
+          <ScalarProperty Name="emo_isolation_boredom" ColumnName="emo_isolation_boredom" />
+          <ScalarProperty Name="emo_noise_vibration_temp" ColumnName="emo_noise_vibration_temp" />
+          <ScalarProperty Name="emo_reality" ColumnName="emo_reality" />
+          <ScalarProperty Name="emo_confident" ColumnName="emo_confident" />
+          <ScalarProperty Name="emo_stress" ColumnName="emo_stress" />
+          <ScalarProperty Name="emo_relaxed" ColumnName="emo_relaxed" />
+          <ScalarProperty Name="obj_realistic" ColumnName="obj_realistic" />
+          <ScalarProperty Name="obj_jealousy" ColumnName="obj_jealousy" />
+          <ScalarProperty Name="obj_adaptable" ColumnName="obj_adaptable" />
+          <ScalarProperty Name="obj_practicalminded" ColumnName="obj_practicalminded" />
+          <ScalarProperty Name="mot_assertive" ColumnName="mot_assertive" />
+          <ScalarProperty Name="mot_independent" ColumnName="mot_independent" />
+          <ScalarProperty Name="mot_resourceful" ColumnName="mot_resourceful" />
+          <ScalarProperty Name="type_of_test_desc" ColumnName="type_of_test_desc" />
+          <ScalarProperty Name="goal_orientation" ColumnName="goal_orientation" />
+          <ScalarProperty Name="recommendation" ColumnName="recommendation" />
+          <ScalarProperty Name="rec_reservation_desc" ColumnName="rec_reservation_desc" />
+          <ScalarProperty Name="rec_not_rec_desc" ColumnName="rec_not_rec_desc" />
+          <ScalarProperty Name="iapa_rel_peer" ColumnName="iapa_rel_peer" />
+          <ScalarProperty Name="iapa_rel_superior" ColumnName="iapa_rel_superior" />
+          <ScalarProperty Name="iapa_self_esteem" ColumnName="iapa_self_esteem" />
+          <ScalarProperty Name="iapa_aggressive_tendencies" ColumnName="iapa_aggressive_tendencies" />
+          <ScalarProperty Name="intel_test" ColumnName="intel_test" />
+          <ScalarProperty Name="intel_result" ColumnName="intel_result" />
+          <ScalarProperty Name="person_test" ColumnName="person_test" />
+          <ScalarProperty Name="person_result" ColumnName="person_result" />
+          <ScalarProperty Name="other_test" ColumnName="other_test" />
+          <ScalarProperty Name="other_result" ColumnName="other_result" />
+          <ScalarProperty Name="ff_eval_details" ColumnName="ff_eval_details" />
+          <ScalarProperty Name="not_rec_details" ColumnName="not_rec_details" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_radiology">
+      <EntityTypeMapping TypeName="cmsiModel.t_radiology">
+        <MappingFragment StoreEntitySet="t_radiology">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="resultid" ColumnName="resultid" />
+          <ScalarProperty Name="result_date" ColumnName="result_date" />
+          <ScalarProperty Name="papin" ColumnName="papin" />
+          <ScalarProperty Name="reference_no" ColumnName="reference_no" />
+          <ScalarProperty Name="findings" ColumnName="findings" />
+          <ScalarProperty Name="radiologist" ColumnName="radiologist" />
+          <ScalarProperty Name="rad_license" ColumnName="rad_license" />
+          <ScalarProperty Name="examination" ColumnName="examination" />
+          <ScalarProperty Name="impression" ColumnName="impression" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_registration">
+      <EntityTypeMapping TypeName="cmsiModel.t_registration">
+        <MappingFragment StoreEntitySet="t_registration">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="trkid" ColumnName="trkid" />
+          <ScalarProperty Name="papin" ColumnName="papin" />
+          <ScalarProperty Name="pxtype" ColumnName="pxtype" />
+          <ScalarProperty Name="trans_date" ColumnName="trans_date" />
+          <ScalarProperty Name="diagnosis" ColumnName="diagnosis" />
+          <ScalarProperty Name="purpose" ColumnName="purpose" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_result_main">
+      <EntityTypeMapping TypeName="cmsiModel.t_result_main">
+        <MappingFragment StoreEntitySet="t_result_main">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="resultid" ColumnName="resultid" />
+          <ScalarProperty Name="resulttype" ColumnName="resulttype" />
+          <ScalarProperty Name="papin" ColumnName="papin" />
+          <ScalarProperty Name="result_date" ColumnName="result_date" />
+          <ScalarProperty Name="pathologist" ColumnName="pathologist" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="fitness_date" ColumnName="fitness_date" />
+          <ScalarProperty Name="valid_until" ColumnName="valid_until" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="recommendation" ColumnName="recommendation" />
+          <ScalarProperty Name="repeat_test_requestby" ColumnName="repeat_test_requestby" />
+          <ScalarProperty Name="repeat_test_tag" ColumnName="repeat_test_tag" />
+          <ScalarProperty Name="specimen_no" ColumnName="specimen_no" />
+          <ScalarProperty Name="medtech" ColumnName="medtech" />
+          <ScalarProperty Name="medtech_license" ColumnName="medtech_license" />
+          <ScalarProperty Name="pathologist_license" ColumnName="pathologist_license" />
+          <ScalarProperty Name="reference_no" ColumnName="reference_no" />
+          <ScalarProperty Name="restriction" ColumnName="restriction" />
+          <ScalarProperty Name="basic_doh_exam" ColumnName="basic_doh_exam" />
+          <ScalarProperty Name="add_lab_tests" ColumnName="add_lab_tests" />
+          <ScalarProperty Name="flag_medlab_req" ColumnName="flag_medlab_req" />
+          <ScalarProperty Name="deck_srvc_flag" ColumnName="deck_srvc_flag" />
+          <ScalarProperty Name="engine_srvc_flag" ColumnName="engine_srvc_flag" />
+          <ScalarProperty Name="catering_srvc_flag" ColumnName="catering_srvc_flag" />
+          <ScalarProperty Name="other_srvc_flag" ColumnName="other_srvc_flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_urinalysis">
+      <EntityTypeMapping TypeName="cmsiModel.t_urinalysis">
+        <MappingFragment StoreEntitySet="t_urinalysis">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="resultid" ColumnName="resultid" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="transparency" ColumnName="transparency" />
+          <ScalarProperty Name="reaction" ColumnName="reaction" />
+          <ScalarProperty Name="specific_gravity" ColumnName="specific_gravity" />
+          <ScalarProperty Name="sugar" ColumnName="sugar" />
+          <ScalarProperty Name="albumin" ColumnName="albumin" />
+          <ScalarProperty Name="blood" ColumnName="blood" />
+          <ScalarProperty Name="fine_granular" ColumnName="fine_granular" />
+          <ScalarProperty Name="coarse_granular" ColumnName="coarse_granular" />
+          <ScalarProperty Name="hyaline" ColumnName="hyaline" />
+          <ScalarProperty Name="waxy" ColumnName="waxy" />
+          <ScalarProperty Name="rbc" ColumnName="rbc" />
+          <ScalarProperty Name="pus" ColumnName="pus" />
+          <ScalarProperty Name="mixed" ColumnName="mixed" />
+          <ScalarProperty Name="red_blood_cells" ColumnName="red_blood_cells" />
+          <ScalarProperty Name="white_blood_cells" ColumnName="white_blood_cells" />
+          <ScalarProperty Name="calcium_oxalate" ColumnName="calcium_oxalate" />
+          <ScalarProperty Name="uric_acid" ColumnName="uric_acid" />
+          <ScalarProperty Name="triple_phosphate" ColumnName="triple_phosphate" />
+          <ScalarProperty Name="others_crystals" ColumnName="others_crystals" />
+          <ScalarProperty Name="amorphous_urates" ColumnName="amorphous_urates" />
+          <ScalarProperty Name="amorphous_phosphates" ColumnName="amorphous_phosphates" />
+          <ScalarProperty Name="epithelial_cells" ColumnName="epithelial_cells" />
+          <ScalarProperty Name="renal_cells" ColumnName="renal_cells" />
+          <ScalarProperty Name="bacteria" ColumnName="bacteria" />
+          <ScalarProperty Name="mucus_threads" ColumnName="mucus_threads" />
+          <ScalarProperty Name="color_remarks" ColumnName="color_remarks" />
+          <ScalarProperty Name="others_specified" ColumnName="others_specified" />
+          <ScalarProperty Name="repeat_test_id" ColumnName="repeat_test_id" />
+          <ScalarProperty Name="urine_bile" ColumnName="urine_bile" />
+          <ScalarProperty Name="others_chem" ColumnName="others_chem" />
+          <ScalarProperty Name="leukocytes" ColumnName="leukocytes" />
+          <ScalarProperty Name="yeast_cells" ColumnName="yeast_cells" />
+          <ScalarProperty Name="squamous" ColumnName="squamous" />
+          <ScalarProperty Name="result_date" ColumnName="result_date" />
+          <ScalarProperty Name="nitrite" ColumnName="nitrite" />
+          <ScalarProperty Name="urobilinogen" ColumnName="urobilinogen" />
+          <ScalarProperty Name="protein" ColumnName="protein" />
+          <ScalarProperty Name="ph" ColumnName="ph" />
+          <ScalarProperty Name="ketone" ColumnName="ketone" />
+          <ScalarProperty Name="bilirubin" ColumnName="bilirubin" />
+          <ScalarProperty Name="microscopic_others" ColumnName="microscopic_others" />
+          <ScalarProperty Name="cast_others" ColumnName="cast_others" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_employer">
+      <EntityTypeMapping TypeName="cmsiModel.tbl_employer">
+        <MappingFragment StoreEntitySet="tbl_employer">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="Employer" ColumnName="Employer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_visit">
+      <EntityTypeMapping TypeName="cmsiModel.tbl_visit">
+        <MappingFragment StoreEntitySet="tbl_visit">
+          <ScalarProperty Name="cn" ColumnName="cn" />
+          <ScalarProperty Name="papin" ColumnName="papin" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time_In" ColumnName="Time-In" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

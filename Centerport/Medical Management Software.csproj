@@ -1,0 +1,1386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2BF054DF-133E-4907-8883-31FBC3AA26E3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Centerport</RootNamespace>
+    <AssemblyName>Medical Management Software</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftp://wearenotlive.com/Centerport/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>2</UpdateInterval>
+    <UpdateIntervalUnits>Hours</UpdateIntervalUnits>
+    <UpdatePeriodically>true</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://wearenotlive.com/Centerport/</InstallUrl>
+    <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <TrustUrlParameters>true</TrustUrlParameters>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>rsz_centerport_logo_resize.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1D6B9469E8753D6B932FE461237ECD7110940236</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Centerport_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Myowncontrol\MetroUI\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.11.0.2\lib\net20\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlBackup, Version=2.0.7.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySqlBackup.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebCam_Capture">
+      <HintPath>..\..\..\..\..\Downloads\EasyWebCam\DLL for Add Reference\WebCam_Capture.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\Bool.cs" />
+    <Compile Include="Class\ClassSql.cs" />
+    <Compile Include="Class\ComboBoxItem.cs" />
+    <Compile Include="Class\CrystalReportLogon.cs" />
+    <Compile Include="Class\EncodeString.cs" />
+    <Compile Include="Class\Helper.cs" />
+    <Compile Include="Class\HIV_Model.cs" />
+    <Compile Include="Class\labSearch_Model.cs" />
+    <Compile Include="Class\LandBaseAdd_Model.cs" />
+    <Compile Include="Class\landbaseSearckList_Model.cs" />
+    <Compile Include="Class\ListboxItem.cs" />
+    <Compile Include="Class\OverlayShadow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\PatientSearchList_Model.cs" />
+    <Compile Include="Class\Psychology_Model.cs" />
+    <Compile Include="Class\QueueSearchList_Model.cs" />
+    <Compile Include="Class\Repeat_hema_Model.cs" />
+    <Compile Include="Class\Seabase_SearchList_Model.cs" />
+    <Compile Include="Class\Seafarer_SearchList_MLC.cs" />
+    <Compile Include="Class\Tool.cs" />
+    <Compile Include="Class\Ultrasound_SearchList_Model.cs" />
+    <Compile Include="Class\user_model.cs" />
+    <Compile Include="Class\Visit_Add_Model.cs" />
+    <Compile Include="Class\WebCam.cs" />
+    <Compile Include="Class\Wizard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\Xray_Model.cs" />
+    <Compile Include="Color.cs" />
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataClasses2.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses2.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\ds_report1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_report1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\ds_report2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_report2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\frm_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dataset\frm_report.Designer.cs">
+      <DependentUpon>frm_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSource\DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EndProcess.cs" />
+    <Compile Include="frm_ChemOthers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ChemOthers.Designer.cs">
+      <DependentUpon>frm_ChemOthers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Instance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Instance.Designer.cs">
+      <DependentUpon>frm_Instance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_krpan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_krpan.Designer.cs">
+      <DependentUpon>frm_krpan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_LabPrintChoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_LabPrintChoices.Designer.cs">
+      <DependentUpon>frm_LabPrintChoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_MLC_Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_MLC_Print.Designer.cs">
+      <DependentUpon>frm_MLC_Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_NewPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NewPatient.Designer.cs">
+      <DependentUpon>frm_NewPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_about.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_about.Designer.cs">
+      <DependentUpon>frm_about.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Approval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Approval.Designer.cs">
+      <DependentUpon>frm_Approval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Backup.Designer.cs">
+      <DependentUpon>frm_Backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_camera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_camera.Designer.cs">
+      <DependentUpon>frm_camera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_FormPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_FormPrinting.Designer.cs">
+      <DependentUpon>frm_FormPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_HIV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_HIV.Designer.cs">
+      <DependentUpon>frm_HIV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_lab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_lab.Designer.cs">
+      <DependentUpon>frm_lab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Landbase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Landbase.Designer.cs">
+      <DependentUpon>frm_Landbase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_addPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_addPatient.Designer.cs">
+      <DependentUpon>frm_addPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_MedicalPersonnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_MedicalPersonnel.Designer.cs">
+      <DependentUpon>frm_MedicalPersonnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_NormalValues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NormalValues.Designer.cs">
+      <DependentUpon>frm_NormalValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_patient_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_patient_Info.Designer.cs">
+      <DependentUpon>frm_patient_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_printers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_printers.Designer.cs">
+      <DependentUpon>frm_printers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Seafarer_MLC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Seafarer_MLC.Designer.cs">
+      <DependentUpon>frm_Seafarer_MLC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_patientInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_patientInfo.Designer.cs">
+      <DependentUpon>frm_patientInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_searchTumor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_searchTumor.Designer.cs">
+      <DependentUpon>frm_searchTumor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_search_hiv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_search_hiv.Designer.cs">
+      <DependentUpon>frm_search_hiv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_search_Patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_search_Patient.Designer.cs">
+      <DependentUpon>frm_search_Patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Psych_Evaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Psych_Evaluation.Designer.cs">
+      <DependentUpon>frm_Psych_Evaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_repeat_Chemistry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_repeat_Chemistry.Designer.cs">
+      <DependentUpon>frm_repeat_Chemistry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_repeat_Fecalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_repeat_Fecalysis.Designer.cs">
+      <DependentUpon>frm_repeat_Fecalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_repeat_Hema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_repeat_Hema.Designer.cs">
+      <DependentUpon>frm_repeat_Hema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_repeat_Urninalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_repeat_Urninalysis.Designer.cs">
+      <DependentUpon>frm_repeat_Urninalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_search_MLC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_search_MLC.Designer.cs">
+      <DependentUpon>frm_search_MLC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_search_Lab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_search_Lab.Designer.cs">
+      <DependentUpon>frm_search_Lab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_search_Land.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_search_Land.Designer.cs">
+      <DependentUpon>frm_search_Land.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_search_Psych_Eval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_search_Psych_Eval.Designer.cs">
+      <DependentUpon>frm_search_Psych_Eval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_search_SeaBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_search_SeaBase.Designer.cs">
+      <DependentUpon>frm_search_SeaBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_search_ultrasound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_search_ultrasound.Designer.cs">
+      <DependentUpon>frm_search_ultrasound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_search_xray.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_search_xray.Designer.cs">
+      <DependentUpon>frm_search_xray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_server.Designer.cs">
+      <DependentUpon>frm_server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_splash.Designer.cs">
+      <DependentUpon>frm_splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Tumor_Immunological.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Tumor_Immunological.Designer.cs">
+      <DependentUpon>frm_Tumor_Immunological.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_user.Designer.cs">
+      <DependentUpon>frm_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_xray.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_xray.Designer.cs">
+      <DependentUpon>frm_xray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_seafarer_MEC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_seafarer_MEC.Designer.cs">
+      <DependentUpon>frm_seafarer_MEC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_search_Patient_Queuing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_search_Patient_Queuing.Designer.cs">
+      <DependentUpon>frm_search_Patient_Queuing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Ultrasound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Ultrasound.Designer.cs">
+      <DependentUpon>frm_Ultrasound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_visit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_visit.Designer.cs">
+      <DependentUpon>frm_visit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_VisitDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_VisitDetail.Designer.cs">
+      <DependentUpon>frm_VisitDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ini.cs" />
+    <Compile Include="RDLC\CMSI_Dataset.cs">
+      <DependentUpon>CMSI_Dataset.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RDLC\CMSI_Dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CMSI_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RDLC\frm_RDLC_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RDLC\frm_RDLC_report.Designer.cs">
+      <DependentUpon>frm_RDLC_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Chem_sub.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chem_sub.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\frm_lab_33_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frm_lab_33_Report.Designer.cs">
+      <DependentUpon>frm_lab_33_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frm_landbase_Print_Choice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frm_landbase_Print_Choice.Designer.cs">
+      <DependentUpon>frm_landbase_Print_Choice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frm_Seabase_Print_Choice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frm_Seabase_Print_Choice.Designer.cs">
+      <DependentUpon>frm_Seabase_Print_Choice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Fecal_sub.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fecal_sub.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Hema_Sub.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hema_Sub.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\kpan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kpan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\lab06_sub.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lab06_sub.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\lab08_sub.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lab08_sub.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\lab34_sub.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lab34_sub.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\lab_printOut_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\lab_printOut_Form.Designer.cs">
+      <DependentUpon>lab_printOut_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\LandBase_MER2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LandBase_MER2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyInter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\08.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>08.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Physcho_revision.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Physcho_revision.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PsychoFinal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PsychoFinal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Psych_Eval.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Psych_Eval.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Report_Lab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Report_Lab.Designer.cs">
+      <DependentUpon>Report_Lab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Report_Landbase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Report_Landbase.Designer.cs">
+      <DependentUpon>Report_Landbase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Report_PrintOuts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Report_PrintOuts.Designer.cs">
+      <DependentUpon>Report_PrintOuts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Report_ResultPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Report_ResultPrinting.Designer.cs">
+      <DependentUpon>Report_ResultPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Report_Visit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Report_Visit.Designer.cs">
+      <DependentUpon>Report_Visit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\R_Chemistry.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_Chemistry.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_chemistry_Form34.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_chemistry_Form34.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_Fecalysis.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_Fecalysis.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_HemaLab01.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_HemaLab01.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_HIV.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_HIV.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_lab_06.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_lab_06.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_lab_08.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_lab_08.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_lanabase_Summary.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_lanabase_Summary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_Landbade_MER.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_Landbade_MER.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_Landbase_Detailed.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_Landbase_Detailed.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_SeabaseDetailed.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_SeabaseDetailed.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_Seabase_MER.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_Seabase_MER.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_Seabase_Summary.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_Seabase_Summary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_TumorImmunological.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_TumorImmunological.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_Ultrasound.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_Ultrasound.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_Urinalysis.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_Urinalysis.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_Visit.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_Visit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_Seabase_MLC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_Seabase_MLC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Report_SeaBase_Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Report_SeaBase_Print.Designer.cs">
+      <DependentUpon>Report_SeaBase_Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\R_landbaseMLC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_landbaseMLC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_Xray.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_Xray.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\R_PsychEval.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R_PsychEval.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Seabase_MER_Page2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Seabase_MER_Page2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SeaSummary.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeaSummary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Urine_sub.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Urine_sub.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Visit_Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Visit_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TableListPath.cs" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
+    <None Include="DataClasses2.dbml.layout">
+      <DependentUpon>DataClasses2.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Dataset\frm_report.resx">
+      <DependentUpon>frm_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ChemOthers.resx">
+      <DependentUpon>frm_ChemOthers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Instance.resx">
+      <DependentUpon>frm_Instance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_krpan.resx">
+      <DependentUpon>frm_krpan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_LabPrintChoices.resx">
+      <DependentUpon>frm_LabPrintChoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_MLC_Print.resx">
+      <DependentUpon>frm_MLC_Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_NewPatient.resx">
+      <DependentUpon>frm_NewPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_about.resx">
+      <DependentUpon>frm_about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_addPatient.resx">
+      <DependentUpon>frm_addPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Approval.resx">
+      <DependentUpon>frm_Approval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Backup.resx">
+      <DependentUpon>frm_Backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_camera.resx">
+      <DependentUpon>frm_camera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_FormPrinting.resx">
+      <DependentUpon>frm_FormPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_HIV.resx">
+      <DependentUpon>frm_HIV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_lab.resx">
+      <DependentUpon>frm_lab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Landbase.resx">
+      <DependentUpon>frm_Landbase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_MedicalPersonnel.resx">
+      <DependentUpon>frm_MedicalPersonnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_NormalValues.resx">
+      <DependentUpon>frm_NormalValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_patient_Info.resx">
+      <DependentUpon>frm_patient_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_printers.resx">
+      <DependentUpon>frm_printers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Seafarer_MLC.resx">
+      <DependentUpon>frm_Seafarer_MLC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_patientInfo.resx">
+      <DependentUpon>frm_patientInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_searchTumor.resx">
+      <DependentUpon>frm_searchTumor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_search_hiv.resx">
+      <DependentUpon>frm_search_hiv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_search_Patient.resx">
+      <DependentUpon>frm_search_Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Psych_Evaluation.resx">
+      <DependentUpon>frm_Psych_Evaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_repeat_Chemistry.resx">
+      <DependentUpon>frm_repeat_Chemistry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_repeat_Fecalysis.resx">
+      <DependentUpon>frm_repeat_Fecalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_repeat_Hema.resx">
+      <DependentUpon>frm_repeat_Hema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_repeat_Urninalysis.resx">
+      <DependentUpon>frm_repeat_Urninalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_search_Land.resx">
+      <DependentUpon>frm_search_Land.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_search_MLC.resx">
+      <DependentUpon>frm_search_MLC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_search_Lab.resx">
+      <DependentUpon>frm_search_Lab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_search_Psych_Eval.resx">
+      <DependentUpon>frm_search_Psych_Eval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_search_SeaBase.resx">
+      <DependentUpon>frm_search_SeaBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_search_ultrasound.resx">
+      <DependentUpon>frm_search_ultrasound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_search_xray.resx">
+      <DependentUpon>frm_search_xray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_server.resx">
+      <DependentUpon>frm_server.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_splash.resx">
+      <DependentUpon>frm_splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Tumor_Immunological.resx">
+      <DependentUpon>frm_Tumor_Immunological.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_user.resx">
+      <DependentUpon>frm_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_xray.resx">
+      <DependentUpon>frm_xray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_seafarer_MEC.resx">
+      <DependentUpon>frm_seafarer_MEC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_search_Patient_Queuing.resx">
+      <DependentUpon>frm_search_Patient_Queuing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Ultrasound.resx">
+      <DependentUpon>frm_Ultrasound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_visit.resx">
+      <DependentUpon>frm_visit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_VisitDetail.resx">
+      <DependentUpon>frm_VisitDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\frm_RDLC_report.resx">
+      <DependentUpon>frm_RDLC_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\Report_Chemistry.rdlc" />
+    <EmbeddedResource Include="RDLC\Report_Fecalysis.rdlc" />
+    <EmbeddedResource Include="RDLC\Report_Hema.rdlc" />
+    <EmbeddedResource Include="RDLC\Report_HIV.rdlc" />
+    <EmbeddedResource Include="RDLC\Report_Lab06.rdlc" />
+    <EmbeddedResource Include="RDLC\Report_Lab_08.rdlc" />
+    <EmbeddedResource Include="RDLC\Report_Land_MLC.rdlc" />
+    <EmbeddedResource Include="RDLC\Report_MLC.rdlc" />
+    <EmbeddedResource Include="RDLC\Report_Psycho.rdlc" />
+    <EmbeddedResource Include="RDLC\Report_Seabase_MLC.rdlc" />
+    <EmbeddedResource Include="RDLC\Report_Ultrasound.rdlc" />
+    <EmbeddedResource Include="RDLC\Report_Urinalysis.rdlc" />
+    <EmbeddedResource Include="RDLC\Report_XRAY.rdlc" />
+    <EmbeddedResource Include="RDLC\Visit.rdlc" />
+    <EmbeddedResource Include="Report\Chem_sub.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Chem_sub.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frm_lab_33_Report.resx">
+      <DependentUpon>frm_lab_33_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frm_landbase_Print_Choice.resx">
+      <DependentUpon>frm_landbase_Print_Choice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frm_Seabase_Print_Choice.resx">
+      <DependentUpon>frm_Seabase_Print_Choice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Fecal_sub.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Fecal_sub.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Hema_Sub.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Hema_Sub.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\kpan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>kpan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\lab06_sub.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lab06_sub.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\lab08_sub.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lab08_sub.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\lab34_sub.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lab34_sub.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\lab_printOut_Form.resx">
+      <DependentUpon>lab_printOut_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\LandBase_MER2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LandBase_MER2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\08.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>08.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Physcho_revision.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Physcho_revision.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PsychoFinal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PsychoFinal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Psych_Eval.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Psych_Eval.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report_Lab.resx">
+      <DependentUpon>Report_Lab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report_Landbase.resx">
+      <DependentUpon>Report_Landbase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report_PrintOuts.resx">
+      <DependentUpon>Report_PrintOuts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report_ResultPrinting.resx">
+      <DependentUpon>Report_ResultPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report_Visit.resx">
+      <DependentUpon>Report_Visit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_Chemistry.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_Chemistry.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_chemistry_Form34.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_chemistry_Form34.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_Fecalysis.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_Fecalysis.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_HemaLab01.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_HemaLab01.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_HIV.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_HIV.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_lab_06.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_lab_06.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_lab_08.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_lab_08.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_lanabase_Summary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_lanabase_Summary.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_Landbade_MER.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_Landbade_MER.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_Landbase_Detailed.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_Landbase_Detailed.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_SeabaseDetailed.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_SeabaseDetailed.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_Seabase_MER.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_Seabase_MER.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_Seabase_Summary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_Seabase_Summary.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_TumorImmunological.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_TumorImmunological.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_Ultrasound.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_Ultrasound.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_Urinalysis.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_Urinalysis.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_Visit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_Visit.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_Seabase_MLC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_Seabase_MLC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report_SeaBase_Print.resx">
+      <DependentUpon>Report_SeaBase_Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_landbaseMLC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_landbaseMLC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_Xray.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_Xray.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\R_PsychEval.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>R_PsychEval.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Seabase_MER_Page2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Seabase_MER_Page2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SeaSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SeaSummary.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Urine_sub.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Urine_sub.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Visit_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Visit_Report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Centerport_TemporaryKey.pfx" />
+    <None Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataClasses2.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses2.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dataset\ds_report1.xsc">
+      <DependentUpon>ds_report1.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\ds_report1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_report1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\ds_report1.xss">
+      <DependentUpon>ds_report1.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\ds_report2.xsc">
+      <DependentUpon>ds_report2.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\ds_report2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_report2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\ds_report2.xss">
+      <DependentUpon>ds_report2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSource\DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSource\DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSource\DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RDLC\CMSI_Dataset.xsc">
+      <DependentUpon>CMSI_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="RDLC\CMSI_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CMSI_Dataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RDLC\CMSI_Dataset.xss">
+      <DependentUpon>CMSI_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Que.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Que%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HIV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\land worker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Patients.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\psychology.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seaman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ultrasound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-ray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnonymousPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_32x29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_2_32x29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_32x29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_32x29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x64\msvcr100.dll">
+      <Link>SqlServerTypes\x64\msvcr100.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x64\SqlServerSpatial110.dll">
+      <Link>SqlServerTypes\x64\SqlServerSpatial110.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x86\msvcr100.dll">
+      <Link>SqlServerTypes\x86\msvcr100.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x86\SqlServerSpatial110.dll">
+      <Link>SqlServerTypes\x86\SqlServerSpatial110.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="centerport_logo.ico" />
+    <None Include="Resources\document_print_preview.png" />
+    <None Include="Resources\logout.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <None Include="Resources\lab_others.png" />
+    <Content Include="rsz_centerport_logo_resize.ico" />
+    <None Include="Resources\centerport_logo_resize.png" />
+    <None Include="Resources\add1.png" />
+    <None Include="Resources\print1.png" />
+    <None Include="Resources\search1.png" />
+    <None Include="Resources\save1.png" />
+    <None Include="Resources\delete1.png" />
+    <None Include="Resources\edit1.png" />
+    <None Include="Resources\Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

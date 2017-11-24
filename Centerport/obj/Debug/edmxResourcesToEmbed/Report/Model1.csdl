@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cmsiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="m_patient">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="papin" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="firstname" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="middlename" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="address_1" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="address_2" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="district" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="contact_1" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="contact_2" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="position" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="marital_status" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="birthdate" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="place_of_birth" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="type_of_job" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="employer" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="passport_no" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="seamansbook_no" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="registration_date" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="nationality" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="religion" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="test_data" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="father_name" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="father_occupation" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="mother_name" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="no_of_brothers" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="no_of_sisters" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="birth_order" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="spouse_name" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="spouse_occupation" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="no_of_children" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="elementary" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="highschool" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="college" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="course" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="highest_level_attended" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="mother_occupation" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="prev_work_start" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="prev_work_end" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="prev_company" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="prev_position" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="prev_leave_reason" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="prev_years" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="date_last_updated" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="sirb" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="designation" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="pbcatcol">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pbc_tnam" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="pbc_tid" Type="Int32" />
+    <Property Name="pbc_ownr" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="pbc_cnam" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="pbc_cid" Type="Int16" />
+    <Property Name="pbc_labl" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbc_lpos" Type="Int16" />
+    <Property Name="pbc_hdr" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbc_hpos" Type="Int16" />
+    <Property Name="pbc_jtfy" Type="Int16" />
+    <Property Name="pbc_mask" Type="String" MaxLength="31" FixedLength="false" Unicode="false" />
+    <Property Name="pbc_case" Type="Int16" />
+    <Property Name="pbc_hght" Type="Int16" />
+    <Property Name="pbc_wdth" Type="Int16" />
+    <Property Name="pbc_ptrn" Type="String" MaxLength="31" FixedLength="false" Unicode="false" />
+    <Property Name="pbc_bmap" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="pbc_init" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbc_cmnt" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbc_edit" Type="String" MaxLength="31" FixedLength="false" Unicode="false" />
+    <Property Name="pbc_tag" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="pbcatedt">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pbe_name" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbe_edit" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbe_type" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbe_cntr" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbe_seqn" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbe_flag" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbe_work" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="pbcatfmt">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pbf_name" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbf_frmt" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbf_type" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbf_cntr" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="pbcattbl">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pbt_tnam" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbt_tid" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbt_ownr" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbd_fhgt" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbd_fwgt" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbd_fitl" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbd_funl" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbd_fchr" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbd_fptc" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbd_ffce" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbh_fhgt" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbh_fwgt" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbh_fitl" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbh_funl" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbh_fchr" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbh_fptc" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbh_ffce" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbl_fhgt" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbl_fwgt" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbl_fitl" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbl_funl" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbl_fchr" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbl_fptc" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbl_ffce" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbt_cmnt" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="pbcatvld">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pbv_name" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbv_vald" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbv_type" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbv_cntr" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pbv_msg" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="r_series_gen">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sgname" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="sgyr" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="sgmo" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="sgseries" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="t_ancillary">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="result_id" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="cxr" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="ecg" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="cbc" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pregnancy_test" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="urinalysis" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="stool_exam" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="hbsag" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="hiv" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="rpr" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="blood_type" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="blood_chemistries" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="psychological_exam" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="additional_test" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="recommendation" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="additional_test2" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="t_clinical_chemistry">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="resultid" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="fbs" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fbs_con" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bun" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bun_con" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="creatinine" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="creatinine_con" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cholesterol_susp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cholesterol_susp_con" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cholesterol_elev" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cholesterol_elev_con" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="uric_acid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="uric_acid_con" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sgot" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sgot_con" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sgpt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sgpt_con" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="alk_phos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="alk_phos_con" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vdrl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hbsag" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ahbe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hbeag" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="widal_test" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="malarial_smear" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hiv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hbsag_titer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ahbe_titer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hbeag_titer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="plasmodium" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="repeat_test_id" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="fbs_high" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="bun_high" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="creatinine_high" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="cholesterol_high" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="triglycerides_high" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="uric_acid_high" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="sgot_high" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="sgpt_high" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="alk_high" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="result_date" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="t_fecalysis">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="resultid" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="color" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ova_parasite" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="consistency" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="red_blood_cells" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="white_blood_cells" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="amoeba" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="others" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="occult_blood" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="repeat_test_id" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="pus_cells" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mucus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="result_date" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="color_others" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="t_hematology">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="resultid" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="hemoglobin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hematocrit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="rbc_count" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="wbc_count" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="lymphocytes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="segmenters" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="eosinophils" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stab_cells" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="basophils" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="monocytes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="blood_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="esr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="others" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="repeat_test_id" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="myelocytes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="juveniles" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="platelet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="result_date" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="t_hiv">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="resultid" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="rapid" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="particle_agglutination" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="eia_cmia_elfa" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="others_specify" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="results" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="t_med_history">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="resultid" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="head_injury" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="frequent_headaches" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="frequent_dizziness" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="fainting_spells" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="insomnia" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="depression" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="trachoma" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="deafness" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nose_throat_disorder" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="tuberculosis" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="other_lung_disorder" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="high_blood_pressure" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="heart_disease" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="rheumatic_fever" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="diabetes_mellitus" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="other_endocrine_disorder" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="cancer_tumor" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="blood_disorders" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="stomach_pain" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="other_abdominal_disorder" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="kidney_bladder_disorder" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="back_injury" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="genetic_hereditary" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="sexually_transmit_disease" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="tropical_disease" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="asthma" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="allergies" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="gynecological_disorder" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="operations" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="operations_specify" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="others" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="consulted" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="consulted_specify" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="maintenance_meds" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="operations_tag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="schistosomiasis" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="last_menstrual_period" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="allergies_specify" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="other_abdominal_specify" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="t_med_history2">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="resultid" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="column1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="column2" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="column3" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="column4" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="column5" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="column6" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="column7" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="column7_comment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="column8" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="column8_comment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="t_others">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="resultid" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SKIN_TAG" Type="Int32" />
+    <Property Name="SKIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HEAD_NECK_SCALP_TAG" Type="Int32" />
+    <Property Name="HEAD_NECK_SCALP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EYES_TAG" Type="Int32" />
+    <Property Name="EYES" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PUPILS_TAG" Type="Int32" />
+    <Property Name="PUPILS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EARS_EARDRUM_TAG" Type="Int32" />
+    <Property Name="EARS_EARDRUM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NOSE_SINUSES_TAG" Type="Int32" />
+    <Property Name="NOSE_SINUSES" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MOUTH_THROAT_TAG" Type="Int32" />
+    <Property Name="MOUTH_THROAT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NECK_LN_THYROID_TAG" Type="Int32" />
+    <Property Name="NECK_LN_THYROID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CHEST_BREAST_AXILLA_TAG" Type="Int32" />
+    <Property Name="CHEST_BREAST_AXILLA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LUNGS_TAG" Type="Int32" />
+    <Property Name="LUNGS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HEART_TAG" Type="Int32" />
+    <Property Name="HEART" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ABDOMEN_TAG" Type="Int32" />
+    <Property Name="ABDOMEN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BACK_FLANK_TAG" Type="Int32" />
+    <Property Name="BACK_FLANK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ANUS_RECTUM_TAG" Type="Int32" />
+    <Property Name="ANUS_RECTUM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GU_SYSTEM_TAG" Type="Int32" />
+    <Property Name="GU_SYSTEM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="INGUINALS_GENITALS_TAG" Type="Int32" />
+    <Property Name="INGUINALS_GENITALS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REFLEXES_TAG" Type="Int32" />
+    <Property Name="REFLEXES" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EXTREMITIES_TAG" Type="Int32" />
+    <Property Name="EXTREMITIES" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DENTAL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DENTAL_TAG" Type="Int32" />
+  </EntityType>
+  <EntityType Name="t_phy_exam">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="resultid" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="HEIGHT" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="WEIGHT" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="BP" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="PULSE" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="RESPIRATION" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="BODY_BUILD" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="FAR_OD_U" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="FAR_OD_C" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="FAR_OS_U" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="FAR_OS_C" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="NEAR_ODJ_U" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="NEAR_ODJ_C" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="NEAR_OSJ_U" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="NEAR_OSJ_C" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="ISHIHARA_U" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="ISHIHARA_C" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="HEARING_AD" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="HEARING_AS" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="SPEECH" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="CONVERSATIONAL_AD" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="CONVERSATIONAL_AS" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="SATISFACTORY_HEARING" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="SATISFACTORY_SIGHT_AID" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="SATISFACTORY_SIGHT_UNAID" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="SATISFACTORY_PSYCHO" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="VISUAL_AIDS" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="FIT_FOR_LOOKOUT" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="HEARING_RIGHT" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="HEARING_LEFT" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="CLARITY_OF_SPEECH" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="VISUAL_AIDS_REQUIRED" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="BP_DIASTOLIC" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="RHYTHM" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="VISUAL_AIDS_WORN" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="COLOR_VISION_DATE_TAKEN" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="UNAIDED_HEARING_SATISFACTORY" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="IDENTITY_CONFIRMED" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="t_psychology">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="resultid" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="type_of_test" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="intelectual_level" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="res_persevering" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="res_obedient" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="res_selfdiscipline" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="res_enthusiastic" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="res_venturesome" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="emo_isolation_boredom" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="emo_noise_vibration_temp" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="emo_reality" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="emo_confident" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="emo_stress" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="emo_relaxed" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="obj_realistic" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="obj_jealousy" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="obj_adaptable" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="obj_practicalminded" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="mot_assertive" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="mot_independent" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="mot_resourceful" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="type_of_test_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="goal_orientation" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="recommendation" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="rec_reservation_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="rec_not_rec_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="iapa_rel_peer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="iapa_rel_superior" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="iapa_self_esteem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="iapa_aggressive_tendencies" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="intel_test" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="intel_result" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="person_test" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="person_result" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="other_test" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="other_result" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ff_eval_details" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="not_rec_details" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="t_radiology">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="resultid" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="result_date" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="papin" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="reference_no" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="findings" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="radiologist" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="rad_license" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="examination" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="impression" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="t_registration">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="trkid" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="papin" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pxtype" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="trans_date" Type="String" MaxLength="254" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="diagnosis" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="purpose" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="t_result_main">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="resultid" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="resulttype" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="papin" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="result_date" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pathologist" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="fitness_date" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="valid_until" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="recommendation" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="repeat_test_requestby" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="repeat_test_tag" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="specimen_no" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="medtech" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="medtech_license" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="pathologist_license" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="reference_no" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="restriction" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="basic_doh_exam" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="add_lab_tests" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="flag_medlab_req" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="deck_srvc_flag" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="engine_srvc_flag" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="catering_srvc_flag" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="other_srvc_flag" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="t_urinalysis">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="resultid" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="color" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="transparency" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="reaction" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="specific_gravity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sugar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="albumin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="blood" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fine_granular" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="coarse_granular" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hyaline" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="waxy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="rbc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mixed" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="red_blood_cells" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="white_blood_cells" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="calcium_oxalate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="uric_acid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="triple_phosphate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="others_crystals" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="amorphous_urates" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="amorphous_phosphates" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="epithelial_cells" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="renal_cells" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bacteria" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mucus_threads" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="color_remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="others_specified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="repeat_test_id" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="urine_bile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="others_chem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="leukocytes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="yeast_cells" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="squamous" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="result_date" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="nitrite" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="urobilinogen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="protein" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ph" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ketone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bilirubin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="microscopic_others" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cast_others" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_employer">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Employer" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_visit">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="papin" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="Time_In" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="Purpose" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="cmsiEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="m_patient" EntityType="Self.m_patient" />
+    <EntitySet Name="pbcatcols" EntityType="Self.pbcatcol" />
+    <EntitySet Name="pbcatedts" EntityType="Self.pbcatedt" />
+    <EntitySet Name="pbcatfmts" EntityType="Self.pbcatfmt" />
+    <EntitySet Name="pbcattbls" EntityType="Self.pbcattbl" />
+    <EntitySet Name="pbcatvlds" EntityType="Self.pbcatvld" />
+    <EntitySet Name="r_series_gen" EntityType="Self.r_series_gen" />
+    <EntitySet Name="t_ancillary" EntityType="Self.t_ancillary" />
+    <EntitySet Name="t_clinical_chemistry" EntityType="Self.t_clinical_chemistry" />
+    <EntitySet Name="t_fecalysis" EntityType="Self.t_fecalysis" />
+    <EntitySet Name="t_hematology" EntityType="Self.t_hematology" />
+    <EntitySet Name="t_hiv" EntityType="Self.t_hiv" />
+    <EntitySet Name="t_med_history" EntityType="Self.t_med_history" />
+    <EntitySet Name="t_med_history2" EntityType="Self.t_med_history2" />
+    <EntitySet Name="t_others" EntityType="Self.t_others" />
+    <EntitySet Name="t_phy_exam" EntityType="Self.t_phy_exam" />
+    <EntitySet Name="t_psychology" EntityType="Self.t_psychology" />
+    <EntitySet Name="t_radiology" EntityType="Self.t_radiology" />
+    <EntitySet Name="t_registration" EntityType="Self.t_registration" />
+    <EntitySet Name="t_result_main" EntityType="Self.t_result_main" />
+    <EntitySet Name="t_urinalysis" EntityType="Self.t_urinalysis" />
+    <EntitySet Name="tbl_employer" EntityType="Self.tbl_employer" />
+    <EntitySet Name="tbl_visit" EntityType="Self.tbl_visit" />
+  </EntityContainer>
+</Schema>

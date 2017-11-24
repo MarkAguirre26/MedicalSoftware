@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet" targetNamespace="http://tempuri.org/DataSet.xsd" xmlns:mstns="http://tempuri.org/DataSet.xsd" xmlns="http://tempuri.org/DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="cmsiConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="cmsiConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Centerport.Properties.Settings.GlobalReference.Default.cmsiConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Search_Phyc_DataTableTableAdapter" GeneratorDataComponentClassName="Search_Phyc_DataTableTableAdapter" Name="Search_Phyc_DataTable" UserDataComponentName="Search_Phyc_DataTableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cmsiConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>`cmsi`.`Search_patient_Add`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cn" DataSetColumn="cn" />
+              <Mapping SourceColumn="papin" DataSetColumn="papin" />
+              <Mapping SourceColumn="Patient Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="gender" DataSetColumn="gender" />
+              <Mapping SourceColumn="picture" DataSetColumn="picture" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet" msprop:Generator_UserDSName="DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Search_Phyc_DataTable" msprop:Generator_TableClassName="Search_Phyc_DataTableDataTable" msprop:Generator_TableVarName="tableSearch_Phyc_DataTable" msprop:Generator_TablePropName="Search_Phyc_DataTable" msprop:Generator_RowDeletingName="Search_Phyc_DataTableRowDeleting" msprop:Generator_RowChangingName="Search_Phyc_DataTableRowChanging" msprop:Generator_RowEvHandlerName="Search_Phyc_DataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="Search_Phyc_DataTableRowDeleted" msprop:Generator_UserTableName="Search_Phyc_DataTable" msprop:Generator_RowChangedName="Search_Phyc_DataTableRowChanged" msprop:Generator_RowEvArgName="Search_Phyc_DataTableRowChangeEvent" msprop:Generator_RowClassName="Search_Phyc_DataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cn" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncn" msprop:Generator_ColumnPropNameInRow="cn" msprop:Generator_ColumnPropNameInTable="cnColumn" msprop:Generator_UserColumnName="cn" type="xs:int" />
+              <xs:element name="papin" msprop:Generator_ColumnVarNameInTable="columnpapin" msprop:Generator_ColumnPropNameInRow="papin" msprop:Generator_ColumnPropNameInTable="papinColumn" msprop:Generator_UserColumnName="papin" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="254" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msdata:Caption="Patient Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gender" msprop:Generator_ColumnVarNameInTable="columngender" msprop:Generator_ColumnPropNameInRow="gender" msprop:Generator_ColumnPropNameInTable="genderColumn" msprop:Generator_UserColumnName="gender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="254" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="picture" msprop:Generator_ColumnVarNameInTable="columnpicture" msprop:Generator_ColumnPropNameInRow="picture" msprop:Generator_ColumnPropNameInTable="pictureColumn" msprop:Generator_UserColumnName="picture" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Search_Phyc_DataTable" />
+      <xs:field xpath="mstns:cn" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cmsiModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="m_patient">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="papin" Type="varchar" MaxLength="254" />
+    <Property Name="lastname" Type="varchar" MaxLength="254" />
+    <Property Name="firstname" Type="varchar" MaxLength="254" />
+    <Property Name="middlename" Type="varchar" MaxLength="254" />
+    <Property Name="address_1" Type="varchar" MaxLength="254" />
+    <Property Name="address_2" Type="varchar" MaxLength="254" />
+    <Property Name="city" Type="varchar" MaxLength="254" />
+    <Property Name="district" Type="varchar" MaxLength="254" />
+    <Property Name="contact_1" Type="varchar" MaxLength="254" />
+    <Property Name="contact_2" Type="varchar" MaxLength="254" />
+    <Property Name="position" Type="varchar" MaxLength="254" />
+    <Property Name="marital_status" Type="varchar" MaxLength="254" />
+    <Property Name="gender" Type="varchar" MaxLength="254" />
+    <Property Name="birthdate" Type="varchar" MaxLength="254" />
+    <Property Name="place_of_birth" Type="varchar" MaxLength="254" />
+    <Property Name="type_of_job" Type="varchar" MaxLength="254" />
+    <Property Name="employer" Type="varchar" MaxLength="254" />
+    <Property Name="passport_no" Type="varchar" MaxLength="254" />
+    <Property Name="seamansbook_no" Type="varchar" MaxLength="254" />
+    <Property Name="picture" Type="longblob" />
+    <Property Name="registration_date" Type="varchar" MaxLength="254" />
+    <Property Name="remarks" Type="varchar" MaxLength="254" />
+    <Property Name="nationality" Type="varchar" MaxLength="254" />
+    <Property Name="religion" Type="varchar" MaxLength="254" />
+    <Property Name="test_data" Type="varchar" MaxLength="254" />
+    <Property Name="father_name" Type="varchar" MaxLength="254" />
+    <Property Name="father_occupation" Type="varchar" MaxLength="254" />
+    <Property Name="mother_name" Type="varchar" MaxLength="254" />
+    <Property Name="no_of_brothers" Type="varchar" MaxLength="254" />
+    <Property Name="no_of_sisters" Type="varchar" MaxLength="254" />
+    <Property Name="birth_order" Type="varchar" MaxLength="254" />
+    <Property Name="spouse_name" Type="varchar" MaxLength="254" />
+    <Property Name="spouse_occupation" Type="varchar" MaxLength="254" />
+    <Property Name="no_of_children" Type="varchar" MaxLength="254" />
+    <Property Name="elementary" Type="varchar" MaxLength="254" />
+    <Property Name="highschool" Type="varchar" MaxLength="254" />
+    <Property Name="college" Type="varchar" MaxLength="254" />
+    <Property Name="course" Type="varchar" MaxLength="254" />
+    <Property Name="highest_level_attended" Type="varchar" MaxLength="254" />
+    <Property Name="mother_occupation" Type="varchar" MaxLength="254" />
+    <Property Name="prev_work_start" Type="varchar" MaxLength="254" />
+    <Property Name="prev_work_end" Type="varchar" MaxLength="254" />
+    <Property Name="prev_company" Type="varchar" MaxLength="254" />
+    <Property Name="prev_position" Type="varchar" MaxLength="254" />
+    <Property Name="prev_leave_reason" Type="varchar" MaxLength="254" />
+    <Property Name="prev_years" Type="varchar" MaxLength="254" />
+    <Property Name="date_last_updated" Type="varchar" MaxLength="254" />
+    <Property Name="sirb" Type="varchar" MaxLength="254" />
+    <Property Name="designation" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="pbcatcol">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pbc_tnam" Type="char" MaxLength="30" />
+    <Property Name="pbc_tid" Type="int" />
+    <Property Name="pbc_ownr" Type="char" MaxLength="30" />
+    <Property Name="pbc_cnam" Type="char" MaxLength="30" />
+    <Property Name="pbc_cid" Type="smallint" />
+    <Property Name="pbc_labl" Type="varchar" MaxLength="254" />
+    <Property Name="pbc_lpos" Type="smallint" />
+    <Property Name="pbc_hdr" Type="varchar" MaxLength="254" />
+    <Property Name="pbc_hpos" Type="smallint" />
+    <Property Name="pbc_jtfy" Type="smallint" />
+    <Property Name="pbc_mask" Type="varchar" MaxLength="31" />
+    <Property Name="pbc_case" Type="smallint" />
+    <Property Name="pbc_hght" Type="smallint" />
+    <Property Name="pbc_wdth" Type="smallint" />
+    <Property Name="pbc_ptrn" Type="varchar" MaxLength="31" />
+    <Property Name="pbc_bmap" Type="char" MaxLength="1" />
+    <Property Name="pbc_init" Type="varchar" MaxLength="254" />
+    <Property Name="pbc_cmnt" Type="varchar" MaxLength="254" />
+    <Property Name="pbc_edit" Type="varchar" MaxLength="31" />
+    <Property Name="pbc_tag" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="pbcatedt">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pbe_name" Type="varchar" MaxLength="254" />
+    <Property Name="pbe_edit" Type="varchar" MaxLength="254" />
+    <Property Name="pbe_type" Type="varchar" MaxLength="254" />
+    <Property Name="pbe_cntr" Type="varchar" MaxLength="254" />
+    <Property Name="pbe_seqn" Type="varchar" MaxLength="254" />
+    <Property Name="pbe_flag" Type="varchar" MaxLength="254" />
+    <Property Name="pbe_work" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="pbcatfmt">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pbf_name" Type="varchar" MaxLength="254" />
+    <Property Name="pbf_frmt" Type="varchar" MaxLength="254" />
+    <Property Name="pbf_type" Type="varchar" MaxLength="254" />
+    <Property Name="pbf_cntr" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="pbcattbl">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pbt_tnam" Type="varchar" MaxLength="254" />
+    <Property Name="pbt_tid" Type="varchar" MaxLength="254" />
+    <Property Name="pbt_ownr" Type="varchar" MaxLength="254" />
+    <Property Name="pbd_fhgt" Type="varchar" MaxLength="254" />
+    <Property Name="pbd_fwgt" Type="varchar" MaxLength="254" />
+    <Property Name="pbd_fitl" Type="varchar" MaxLength="254" />
+    <Property Name="pbd_funl" Type="varchar" MaxLength="254" />
+    <Property Name="pbd_fchr" Type="varchar" MaxLength="254" />
+    <Property Name="pbd_fptc" Type="varchar" MaxLength="254" />
+    <Property Name="pbd_ffce" Type="varchar" MaxLength="254" />
+    <Property Name="pbh_fhgt" Type="varchar" MaxLength="254" />
+    <Property Name="pbh_fwgt" Type="varchar" MaxLength="254" />
+    <Property Name="pbh_fitl" Type="varchar" MaxLength="254" />
+    <Property Name="pbh_funl" Type="varchar" MaxLength="254" />
+    <Property Name="pbh_fchr" Type="varchar" MaxLength="254" />
+    <Property Name="pbh_fptc" Type="varchar" MaxLength="254" />
+    <Property Name="pbh_ffce" Type="varchar" MaxLength="254" />
+    <Property Name="pbl_fhgt" Type="varchar" MaxLength="254" />
+    <Property Name="pbl_fwgt" Type="varchar" MaxLength="254" />
+    <Property Name="pbl_fitl" Type="varchar" MaxLength="254" />
+    <Property Name="pbl_funl" Type="varchar" MaxLength="254" />
+    <Property Name="pbl_fchr" Type="varchar" MaxLength="254" />
+    <Property Name="pbl_fptc" Type="varchar" MaxLength="254" />
+    <Property Name="pbl_ffce" Type="varchar" MaxLength="254" />
+    <Property Name="pbt_cmnt" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="pbcatvld">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pbv_name" Type="varchar" MaxLength="254" />
+    <Property Name="pbv_vald" Type="varchar" MaxLength="254" />
+    <Property Name="pbv_type" Type="varchar" MaxLength="254" />
+    <Property Name="pbv_cntr" Type="varchar" MaxLength="254" />
+    <Property Name="pbv_msg" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="r_series_gen">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sgname" Type="varchar" MaxLength="254" />
+    <Property Name="sgyr" Type="varchar" MaxLength="254" />
+    <Property Name="sgmo" Type="varchar" MaxLength="254" />
+    <Property Name="sgseries" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="t_ancillary">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="result_id" Type="varchar" MaxLength="254" />
+    <Property Name="cxr" Type="varchar" MaxLength="254" />
+    <Property Name="ecg" Type="varchar" MaxLength="254" />
+    <Property Name="cbc" Type="varchar" MaxLength="254" />
+    <Property Name="pregnancy_test" Type="varchar" MaxLength="254" />
+    <Property Name="urinalysis" Type="varchar" MaxLength="254" />
+    <Property Name="stool_exam" Type="varchar" MaxLength="254" />
+    <Property Name="hbsag" Type="varchar" MaxLength="254" />
+    <Property Name="hiv" Type="varchar" MaxLength="254" />
+    <Property Name="rpr" Type="varchar" MaxLength="254" />
+    <Property Name="blood_type" Type="varchar" MaxLength="254" />
+    <Property Name="blood_chemistries" Type="varchar" MaxLength="254" />
+    <Property Name="psychological_exam" Type="varchar" MaxLength="254" />
+    <Property Name="additional_test" Type="varchar" MaxLength="254" />
+    <Property Name="remarks" Type="varchar" MaxLength="254" />
+    <Property Name="recommendation" Type="varchar" MaxLength="254" />
+    <Property Name="additional_test2" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="t_clinical_chemistry">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="resultid" Type="varchar" MaxLength="15" />
+    <Property Name="fbs" Type="varchar" MaxLength="50" />
+    <Property Name="fbs_con" Type="varchar" MaxLength="50" />
+    <Property Name="bun" Type="varchar" MaxLength="50" />
+    <Property Name="bun_con" Type="varchar" MaxLength="50" />
+    <Property Name="creatinine" Type="varchar" MaxLength="50" />
+    <Property Name="creatinine_con" Type="varchar" MaxLength="50" />
+    <Property Name="cholesterol_susp" Type="varchar" MaxLength="50" />
+    <Property Name="cholesterol_susp_con" Type="varchar" MaxLength="50" />
+    <Property Name="cholesterol_elev" Type="varchar" MaxLength="50" />
+    <Property Name="cholesterol_elev_con" Type="varchar" MaxLength="50" />
+    <Property Name="uric_acid" Type="varchar" MaxLength="50" />
+    <Property Name="uric_acid_con" Type="varchar" MaxLength="50" />
+    <Property Name="sgot" Type="varchar" MaxLength="50" />
+    <Property Name="sgot_con" Type="varchar" MaxLength="50" />
+    <Property Name="sgpt" Type="varchar" MaxLength="50" />
+    <Property Name="sgpt_con" Type="varchar" MaxLength="50" />
+    <Property Name="alk_phos" Type="varchar" MaxLength="50" />
+    <Property Name="alk_phos_con" Type="varchar" MaxLength="50" />
+    <Property Name="vdrl" Type="varchar" MaxLength="50" />
+    <Property Name="hbsag" Type="varchar" MaxLength="50" />
+    <Property Name="ahbe" Type="varchar" MaxLength="50" />
+    <Property Name="hbeag" Type="varchar" MaxLength="50" />
+    <Property Name="widal_test" Type="varchar" MaxLength="50" />
+    <Property Name="malarial_smear" Type="varchar" MaxLength="50" />
+    <Property Name="hiv" Type="varchar" MaxLength="50" />
+    <Property Name="hbsag_titer" Type="varchar" MaxLength="50" />
+    <Property Name="ahbe_titer" Type="varchar" MaxLength="50" />
+    <Property Name="hbeag_titer" Type="varchar" MaxLength="50" />
+    <Property Name="plasmodium" Type="varchar" MaxLength="50" />
+    <Property Name="repeat_test_id" Type="varchar" MaxLength="254" />
+    <Property Name="fbs_high" Type="varchar" MaxLength="254" />
+    <Property Name="bun_high" Type="varchar" MaxLength="254" />
+    <Property Name="creatinine_high" Type="varchar" MaxLength="254" />
+    <Property Name="cholesterol_high" Type="varchar" MaxLength="254" />
+    <Property Name="triglycerides_high" Type="varchar" MaxLength="254" />
+    <Property Name="uric_acid_high" Type="varchar" MaxLength="254" />
+    <Property Name="sgot_high" Type="varchar" MaxLength="254" />
+    <Property Name="sgpt_high" Type="varchar" MaxLength="254" />
+    <Property Name="alk_high" Type="varchar" MaxLength="254" />
+    <Property Name="result_date" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="t_fecalysis">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="resultid" Type="varchar" MaxLength="15" />
+    <Property Name="color" Type="varchar" MaxLength="50" />
+    <Property Name="ova_parasite" Type="varchar" MaxLength="50" />
+    <Property Name="consistency" Type="varchar" MaxLength="50" />
+    <Property Name="red_blood_cells" Type="varchar" MaxLength="50" />
+    <Property Name="white_blood_cells" Type="varchar" MaxLength="50" />
+    <Property Name="amoeba" Type="varchar" MaxLength="50" />
+    <Property Name="others" Type="varchar" MaxLength="50" />
+    <Property Name="occult_blood" Type="varchar" MaxLength="50" />
+    <Property Name="repeat_test_id" Type="varchar" MaxLength="15" />
+    <Property Name="pus_cells" Type="varchar" MaxLength="50" />
+    <Property Name="mucus" Type="varchar" MaxLength="50" />
+    <Property Name="result_date" Type="varchar" MaxLength="254" />
+    <Property Name="color_others" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="t_hematology">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="resultid" Type="varchar" MaxLength="254" />
+    <Property Name="hemoglobin" Type="varchar" MaxLength="50" />
+    <Property Name="hematocrit" Type="varchar" MaxLength="50" />
+    <Property Name="rbc_count" Type="varchar" MaxLength="50" />
+    <Property Name="wbc_count" Type="varchar" MaxLength="50" />
+    <Property Name="lymphocytes" Type="varchar" MaxLength="50" />
+    <Property Name="segmenters" Type="varchar" MaxLength="50" />
+    <Property Name="eosinophils" Type="varchar" MaxLength="50" />
+    <Property Name="stab_cells" Type="varchar" MaxLength="50" />
+    <Property Name="basophils" Type="varchar" MaxLength="50" />
+    <Property Name="monocytes" Type="varchar" MaxLength="50" />
+    <Property Name="blood_type" Type="varchar" MaxLength="50" />
+    <Property Name="esr" Type="varchar" MaxLength="50" />
+    <Property Name="others" Type="varchar" MaxLength="50" />
+    <Property Name="repeat_test_id" Type="varchar" MaxLength="15" />
+    <Property Name="myelocytes" Type="varchar" MaxLength="50" />
+    <Property Name="juveniles" Type="varchar" MaxLength="50" />
+    <Property Name="platelet" Type="varchar" MaxLength="50" />
+    <Property Name="result_date" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="t_hiv">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="resultid" Type="varchar" MaxLength="15" />
+    <Property Name="rapid" Type="varchar" MaxLength="1" />
+    <Property Name="particle_agglutination" Type="varchar" MaxLength="1" />
+    <Property Name="eia_cmia_elfa" Type="varchar" MaxLength="1" />
+    <Property Name="others_specify" Type="varchar" MaxLength="50" />
+    <Property Name="results" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="t_med_history">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="resultid" Type="varchar" MaxLength="15" />
+    <Property Name="head_injury" Type="varchar" MaxLength="1" />
+    <Property Name="frequent_headaches" Type="varchar" MaxLength="1" />
+    <Property Name="frequent_dizziness" Type="varchar" MaxLength="1" />
+    <Property Name="fainting_spells" Type="varchar" MaxLength="1" />
+    <Property Name="insomnia" Type="varchar" MaxLength="1" />
+    <Property Name="depression" Type="varchar" MaxLength="1" />
+    <Property Name="trachoma" Type="varchar" MaxLength="1" />
+    <Property Name="deafness" Type="varchar" MaxLength="1" />
+    <Property Name="nose_throat_disorder" Type="varchar" MaxLength="1" />
+    <Property Name="tuberculosis" Type="varchar" MaxLength="1" />
+    <Property Name="other_lung_disorder" Type="varchar" MaxLength="1" />
+    <Property Name="high_blood_pressure" Type="varchar" MaxLength="1" />
+    <Property Name="heart_disease" Type="varchar" MaxLength="1" />
+    <Property Name="rheumatic_fever" Type="varchar" MaxLength="1" />
+    <Property Name="diabetes_mellitus" Type="varchar" MaxLength="1" />
+    <Property Name="other_endocrine_disorder" Type="varchar" MaxLength="1" />
+    <Property Name="cancer_tumor" Type="varchar" MaxLength="1" />
+    <Property Name="blood_disorders" Type="varchar" MaxLength="1" />
+    <Property Name="stomach_pain" Type="varchar" MaxLength="1" />
+    <Property Name="other_abdominal_disorder" Type="varchar" MaxLength="1" />
+    <Property Name="kidney_bladder_disorder" Type="varchar" MaxLength="1" />
+    <Property Name="back_injury" Type="varchar" MaxLength="1" />
+    <Property Name="genetic_hereditary" Type="varchar" MaxLength="1" />
+    <Property Name="sexually_transmit_disease" Type="varchar" MaxLength="1" />
+    <Property Name="tropical_disease" Type="varchar" MaxLength="1" />
+    <Property Name="asthma" Type="varchar" MaxLength="1" />
+    <Property Name="allergies" Type="varchar" MaxLength="1" />
+    <Property Name="gynecological_disorder" Type="varchar" MaxLength="1" />
+    <Property Name="operations" Type="varchar" MaxLength="1" />
+    <Property Name="operations_specify" Type="varchar" MaxLength="50" />
+    <Property Name="others" Type="varchar" MaxLength="50" />
+    <Property Name="consulted" Type="varchar" MaxLength="1" />
+    <Property Name="consulted_specify" Type="varchar" MaxLength="50" />
+    <Property Name="maintenance_meds" Type="varchar" MaxLength="50" />
+    <Property Name="operations_tag" Type="varchar" MaxLength="1" />
+    <Property Name="schistosomiasis" Type="varchar" MaxLength="1" />
+    <Property Name="last_menstrual_period" Type="varchar" MaxLength="1" />
+    <Property Name="allergies_specify" Type="varchar" MaxLength="50" />
+    <Property Name="other_abdominal_specify" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="t_med_history2">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="resultid" Type="varchar" MaxLength="15" />
+    <Property Name="column1" Type="varchar" MaxLength="1" />
+    <Property Name="column2" Type="varchar" MaxLength="1" />
+    <Property Name="column3" Type="varchar" MaxLength="1" />
+    <Property Name="column4" Type="varchar" MaxLength="1" />
+    <Property Name="column5" Type="varchar" MaxLength="1" />
+    <Property Name="column6" Type="varchar" MaxLength="1" />
+    <Property Name="column7" Type="varchar" MaxLength="1" />
+    <Property Name="column7_comment" Type="varchar" MaxLength="50" />
+    <Property Name="column8" Type="varchar" MaxLength="1" />
+    <Property Name="column8_comment" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="t_others">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="resultid" Type="varchar" MaxLength="15" />
+    <Property Name="SKIN_TAG" Type="int" />
+    <Property Name="SKIN" Type="varchar" MaxLength="50" />
+    <Property Name="HEAD_NECK_SCALP_TAG" Type="int" />
+    <Property Name="HEAD_NECK_SCALP" Type="varchar" MaxLength="50" />
+    <Property Name="EYES_TAG" Type="int" />
+    <Property Name="EYES" Type="varchar" MaxLength="50" />
+    <Property Name="PUPILS_TAG" Type="int" />
+    <Property Name="PUPILS" Type="varchar" MaxLength="50" />
+    <Property Name="EARS_EARDRUM_TAG" Type="int" />
+    <Property Name="EARS_EARDRUM" Type="varchar" MaxLength="50" />
+    <Property Name="NOSE_SINUSES_TAG" Type="int" />
+    <Property Name="NOSE_SINUSES" Type="varchar" MaxLength="50" />
+    <Property Name="MOUTH_THROAT_TAG" Type="int" />
+    <Property Name="MOUTH_THROAT" Type="varchar" MaxLength="50" />
+    <Property Name="NECK_LN_THYROID_TAG" Type="int" />
+    <Property Name="NECK_LN_THYROID" Type="varchar" MaxLength="50" />
+    <Property Name="CHEST_BREAST_AXILLA_TAG" Type="int" />
+    <Property Name="CHEST_BREAST_AXILLA" Type="varchar" MaxLength="50" />
+    <Property Name="LUNGS_TAG" Type="int" />
+    <Property Name="LUNGS" Type="varchar" MaxLength="50" />
+    <Property Name="HEART_TAG" Type="int" />
+    <Property Name="HEART" Type="varchar" MaxLength="50" />
+    <Property Name="ABDOMEN_TAG" Type="int" />
+    <Property Name="ABDOMEN" Type="varchar" MaxLength="50" />
+    <Property Name="BACK_FLANK_TAG" Type="int" />
+    <Property Name="BACK_FLANK" Type="varchar" MaxLength="50" />
+    <Property Name="ANUS_RECTUM_TAG" Type="int" />
+    <Property Name="ANUS_RECTUM" Type="varchar" MaxLength="50" />
+    <Property Name="GU_SYSTEM_TAG" Type="int" />
+    <Property Name="GU_SYSTEM" Type="varchar" MaxLength="50" />
+    <Property Name="INGUINALS_GENITALS_TAG" Type="int" />
+    <Property Name="INGUINALS_GENITALS" Type="varchar" MaxLength="50" />
+    <Property Name="REFLEXES_TAG" Type="int" />
+    <Property Name="REFLEXES" Type="varchar" MaxLength="50" />
+    <Property Name="EXTREMITIES_TAG" Type="int" />
+    <Property Name="EXTREMITIES" Type="varchar" MaxLength="50" />
+    <Property Name="DENTAL" Type="varchar" MaxLength="100" />
+    <Property Name="DENTAL_TAG" Type="int" />
+  </EntityType>
+  <EntityType Name="t_phy_exam">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="resultid" Type="varchar" MaxLength="254" />
+    <Property Name="HEIGHT" Type="varchar" MaxLength="254" />
+    <Property Name="WEIGHT" Type="varchar" MaxLength="254" />
+    <Property Name="BP" Type="varchar" MaxLength="254" />
+    <Property Name="PULSE" Type="varchar" MaxLength="254" />
+    <Property Name="RESPIRATION" Type="varchar" MaxLength="254" />
+    <Property Name="BODY_BUILD" Type="varchar" MaxLength="254" />
+    <Property Name="FAR_OD_U" Type="varchar" MaxLength="254" />
+    <Property Name="FAR_OD_C" Type="varchar" MaxLength="254" />
+    <Property Name="FAR_OS_U" Type="varchar" MaxLength="254" />
+    <Property Name="FAR_OS_C" Type="varchar" MaxLength="254" />
+    <Property Name="NEAR_ODJ_U" Type="varchar" MaxLength="254" />
+    <Property Name="NEAR_ODJ_C" Type="varchar" MaxLength="254" />
+    <Property Name="NEAR_OSJ_U" Type="varchar" MaxLength="254" />
+    <Property Name="NEAR_OSJ_C" Type="varchar" MaxLength="254" />
+    <Property Name="ISHIHARA_U" Type="varchar" MaxLength="254" />
+    <Property Name="ISHIHARA_C" Type="varchar" MaxLength="254" />
+    <Property Name="HEARING_AD" Type="varchar" MaxLength="254" />
+    <Property Name="HEARING_AS" Type="varchar" MaxLength="254" />
+    <Property Name="SPEECH" Type="varchar" MaxLength="254" />
+    <Property Name="CONVERSATIONAL_AD" Type="varchar" MaxLength="254" />
+    <Property Name="CONVERSATIONAL_AS" Type="varchar" MaxLength="254" />
+    <Property Name="SATISFACTORY_HEARING" Type="varchar" MaxLength="254" />
+    <Property Name="SATISFACTORY_SIGHT_AID" Type="varchar" MaxLength="254" />
+    <Property Name="SATISFACTORY_SIGHT_UNAID" Type="varchar" MaxLength="254" />
+    <Property Name="SATISFACTORY_PSYCHO" Type="varchar" MaxLength="254" />
+    <Property Name="VISUAL_AIDS" Type="varchar" MaxLength="254" />
+    <Property Name="FIT_FOR_LOOKOUT" Type="varchar" MaxLength="254" />
+    <Property Name="HEARING_RIGHT" Type="varchar" MaxLength="254" />
+    <Property Name="HEARING_LEFT" Type="varchar" MaxLength="254" />
+    <Property Name="CLARITY_OF_SPEECH" Type="varchar" MaxLength="254" />
+    <Property Name="VISUAL_AIDS_REQUIRED" Type="varchar" MaxLength="254" />
+    <Property Name="BP_DIASTOLIC" Type="varchar" MaxLength="254" />
+    <Property Name="RHYTHM" Type="varchar" MaxLength="254" />
+    <Property Name="VISUAL_AIDS_WORN" Type="varchar" MaxLength="254" />
+    <Property Name="COLOR_VISION_DATE_TAKEN" Type="varchar" MaxLength="254" />
+    <Property Name="UNAIDED_HEARING_SATISFACTORY" Type="varchar" MaxLength="254" />
+    <Property Name="IDENTITY_CONFIRMED" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="t_psychology">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="resultid" Type="varchar" MaxLength="254" />
+    <Property Name="type_of_test" Type="varchar" MaxLength="254" />
+    <Property Name="intelectual_level" Type="varchar" MaxLength="254" />
+    <Property Name="res_persevering" Type="varchar" MaxLength="254" />
+    <Property Name="res_obedient" Type="varchar" MaxLength="254" />
+    <Property Name="res_selfdiscipline" Type="varchar" MaxLength="254" />
+    <Property Name="res_enthusiastic" Type="varchar" MaxLength="254" />
+    <Property Name="res_venturesome" Type="varchar" MaxLength="254" />
+    <Property Name="emo_isolation_boredom" Type="varchar" MaxLength="254" />
+    <Property Name="emo_noise_vibration_temp" Type="varchar" MaxLength="254" />
+    <Property Name="emo_reality" Type="varchar" MaxLength="254" />
+    <Property Name="emo_confident" Type="varchar" MaxLength="254" />
+    <Property Name="emo_stress" Type="varchar" MaxLength="254" />
+    <Property Name="emo_relaxed" Type="char" MaxLength="1" />
+    <Property Name="obj_realistic" Type="char" MaxLength="1" />
+    <Property Name="obj_jealousy" Type="char" MaxLength="1" />
+    <Property Name="obj_adaptable" Type="char" MaxLength="1" />
+    <Property Name="obj_practicalminded" Type="char" MaxLength="1" />
+    <Property Name="mot_assertive" Type="char" MaxLength="1" />
+    <Property Name="mot_independent" Type="char" MaxLength="1" />
+    <Property Name="mot_resourceful" Type="char" MaxLength="1" />
+    <Property Name="type_of_test_desc" Type="varchar" MaxLength="50" />
+    <Property Name="goal_orientation" Type="char" MaxLength="1" />
+    <Property Name="recommendation" Type="char" MaxLength="1" />
+    <Property Name="rec_reservation_desc" Type="varchar" MaxLength="50" />
+    <Property Name="rec_not_rec_desc" Type="varchar" MaxLength="50" />
+    <Property Name="iapa_rel_peer" Type="varchar" MaxLength="50" />
+    <Property Name="iapa_rel_superior" Type="varchar" MaxLength="50" />
+    <Property Name="iapa_self_esteem" Type="varchar" MaxLength="50" />
+    <Property Name="iapa_aggressive_tendencies" Type="varchar" MaxLength="50" />
+    <Property Name="intel_test" Type="char" MaxLength="1" />
+    <Property Name="intel_result" Type="varchar" MaxLength="50" />
+    <Property Name="person_test" Type="char" MaxLength="1" />
+    <Property Name="person_result" Type="varchar" MaxLength="50" />
+    <Property Name="other_test" Type="char" MaxLength="1" />
+    <Property Name="other_result" Type="varchar" MaxLength="50" />
+    <Property Name="ff_eval_details" Type="varchar" MaxLength="50" />
+    <Property Name="not_rec_details" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="t_radiology">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="resultid" Type="varchar" MaxLength="254" />
+    <Property Name="result_date" Type="varchar" MaxLength="254" />
+    <Property Name="papin" Type="varchar" MaxLength="254" />
+    <Property Name="reference_no" Type="varchar" MaxLength="254" />
+    <Property Name="findings" Type="longtext" />
+    <Property Name="radiologist" Type="varchar" MaxLength="254" />
+    <Property Name="rad_license" Type="varchar" MaxLength="254" />
+    <Property Name="examination" Type="varchar" MaxLength="254" />
+    <Property Name="impression" Type="longtext" />
+  </EntityType>
+  <EntityType Name="t_registration">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="trkid" Type="varchar" MaxLength="254" />
+    <Property Name="papin" Type="varchar" MaxLength="254" />
+    <Property Name="pxtype" Type="varchar" MaxLength="254" />
+    <Property Name="trans_date" Type="varchar" MaxLength="254" StoreGeneratedPattern="Identity" />
+    <Property Name="diagnosis" Type="varchar" MaxLength="254" />
+    <Property Name="purpose" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="t_result_main">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="resultid" Type="varchar" MaxLength="254" />
+    <Property Name="resulttype" Type="varchar" MaxLength="254" />
+    <Property Name="papin" Type="varchar" MaxLength="254" />
+    <Property Name="result_date" Type="varchar" MaxLength="254" />
+    <Property Name="pathologist" Type="varchar" MaxLength="254" />
+    <Property Name="status" Type="varchar" MaxLength="254" />
+    <Property Name="fitness_date" Type="varchar" MaxLength="254" />
+    <Property Name="valid_until" Type="varchar" MaxLength="254" />
+    <Property Name="remarks" Type="varchar" MaxLength="254" />
+    <Property Name="recommendation" Type="varchar" MaxLength="254" />
+    <Property Name="repeat_test_requestby" Type="varchar" MaxLength="254" />
+    <Property Name="repeat_test_tag" Type="varchar" MaxLength="254" />
+    <Property Name="specimen_no" Type="varchar" MaxLength="254" />
+    <Property Name="medtech" Type="varchar" MaxLength="254" />
+    <Property Name="medtech_license" Type="varchar" MaxLength="254" />
+    <Property Name="pathologist_license" Type="varchar" MaxLength="254" />
+    <Property Name="reference_no" Type="varchar" MaxLength="254" />
+    <Property Name="restriction" Type="varchar" MaxLength="254" />
+    <Property Name="basic_doh_exam" Type="varchar" MaxLength="254" />
+    <Property Name="add_lab_tests" Type="varchar" MaxLength="254" />
+    <Property Name="flag_medlab_req" Type="varchar" MaxLength="254" />
+    <Property Name="deck_srvc_flag" Type="varchar" MaxLength="254" />
+    <Property Name="engine_srvc_flag" Type="varchar" MaxLength="254" />
+    <Property Name="catering_srvc_flag" Type="varchar" MaxLength="254" />
+    <Property Name="other_srvc_flag" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="t_urinalysis">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="resultid" Type="varchar" MaxLength="254" />
+    <Property Name="color" Type="varchar" MaxLength="50" />
+    <Property Name="transparency" Type="varchar" MaxLength="50" />
+    <Property Name="reaction" Type="varchar" MaxLength="50" />
+    <Property Name="specific_gravity" Type="varchar" MaxLength="50" />
+    <Property Name="sugar" Type="varchar" MaxLength="50" />
+    <Property Name="albumin" Type="varchar" MaxLength="50" />
+    <Property Name="blood" Type="varchar" MaxLength="50" />
+    <Property Name="fine_granular" Type="varchar" MaxLength="50" />
+    <Property Name="coarse_granular" Type="varchar" MaxLength="50" />
+    <Property Name="hyaline" Type="varchar" MaxLength="50" />
+    <Property Name="waxy" Type="varchar" MaxLength="50" />
+    <Property Name="rbc" Type="varchar" MaxLength="50" />
+    <Property Name="pus" Type="varchar" MaxLength="50" />
+    <Property Name="mixed" Type="varchar" MaxLength="50" />
+    <Property Name="red_blood_cells" Type="varchar" MaxLength="50" />
+    <Property Name="white_blood_cells" Type="varchar" MaxLength="50" />
+    <Property Name="calcium_oxalate" Type="varchar" MaxLength="50" />
+    <Property Name="uric_acid" Type="varchar" MaxLength="50" />
+    <Property Name="triple_phosphate" Type="varchar" MaxLength="50" />
+    <Property Name="others_crystals" Type="varchar" MaxLength="50" />
+    <Property Name="amorphous_urates" Type="varchar" MaxLength="50" />
+    <Property Name="amorphous_phosphates" Type="varchar" MaxLength="50" />
+    <Property Name="epithelial_cells" Type="varchar" MaxLength="50" />
+    <Property Name="renal_cells" Type="varchar" MaxLength="50" />
+    <Property Name="bacteria" Type="varchar" MaxLength="50" />
+    <Property Name="mucus_threads" Type="varchar" MaxLength="50" />
+    <Property Name="color_remarks" Type="varchar" MaxLength="50" />
+    <Property Name="others_specified" Type="varchar" MaxLength="50" />
+    <Property Name="repeat_test_id" Type="varchar" MaxLength="15" />
+    <Property Name="urine_bile" Type="varchar" MaxLength="50" />
+    <Property Name="others_chem" Type="varchar" MaxLength="50" />
+    <Property Name="leukocytes" Type="varchar" MaxLength="50" />
+    <Property Name="yeast_cells" Type="varchar" MaxLength="50" />
+    <Property Name="squamous" Type="varchar" MaxLength="50" />
+    <Property Name="result_date" Type="varchar" MaxLength="254" />
+    <Property Name="nitrite" Type="varchar" MaxLength="50" />
+    <Property Name="urobilinogen" Type="varchar" MaxLength="50" />
+    <Property Name="protein" Type="varchar" MaxLength="50" />
+    <Property Name="ph" Type="varchar" MaxLength="50" />
+    <Property Name="ketone" Type="varchar" MaxLength="50" />
+    <Property Name="bilirubin" Type="varchar" MaxLength="50" />
+    <Property Name="microscopic_others" Type="varchar" MaxLength="50" />
+    <Property Name="cast_others" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_employer">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Employer" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityType Name="tbl_visit">
+    <Key>
+      <PropertyRef Name="cn" />
+    </Key>
+    <Property Name="cn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="papin" Type="varchar" MaxLength="254" />
+    <Property Name="Date" Type="varchar" MaxLength="254" />
+    <Property Name="Time-In" Type="varchar" MaxLength="254" />
+    <Property Name="Purpose" Type="varchar" MaxLength="254" />
+  </EntityType>
+  <EntityContainer Name="cmsiModelStoreContainer">
+    <EntitySet Name="m_patient" EntityType="Self.m_patient" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="pbcatcol" EntityType="Self.pbcatcol" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="pbcatedt" EntityType="Self.pbcatedt" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="pbcatfmt" EntityType="Self.pbcatfmt" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="pbcattbl" EntityType="Self.pbcattbl" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="pbcatvld" EntityType="Self.pbcatvld" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="r_series_gen" EntityType="Self.r_series_gen" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="t_ancillary" EntityType="Self.t_ancillary" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="t_clinical_chemistry" EntityType="Self.t_clinical_chemistry" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="t_fecalysis" EntityType="Self.t_fecalysis" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="t_hematology" EntityType="Self.t_hematology" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="t_hiv" EntityType="Self.t_hiv" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="t_med_history" EntityType="Self.t_med_history" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="t_med_history2" EntityType="Self.t_med_history2" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="t_others" EntityType="Self.t_others" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="t_phy_exam" EntityType="Self.t_phy_exam" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="t_psychology" EntityType="Self.t_psychology" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="t_radiology" EntityType="Self.t_radiology" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="t_registration" EntityType="Self.t_registration" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="t_result_main" EntityType="Self.t_result_main" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="t_urinalysis" EntityType="Self.t_urinalysis" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="tbl_employer" EntityType="Self.tbl_employer" Schema="cmsi" store:Type="Tables" />
+    <EntitySet Name="tbl_visit" EntityType="Self.tbl_visit" Schema="cmsi" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
